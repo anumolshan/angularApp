@@ -1,0 +1,235 @@
+<div class="surface-card p-4 shadow-2 mb-3 surface-50">
+    <div class="text-3xl mt-1 font-medium text-900">{{'settings.pages.settingpage.settings_tittle'| translate}}</div>
+</div>
+
+
+<div class="surface-card p-4 shadow-2 border-round mb-3 surface-50"  *ngIf="commonService.checkItemExist(commonService.accessList.CompanyProfile) || commonService.checkItemExist(commonService.accessList.TransactionPreferences) || commonService.checkItemExist(commonService.accessList.MailSettings) || commonService.checkItemExist(commonService.accessList.UserManagement)">
+    <div class="text-2xl font-medium text-900">{{'settings.pages.settingpage.business_setting_tittle'| translate}}</div>
+    <div class="surface-border border-round p-4 settings-icon">
+        <div class="grid">
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.adminAppDetails && commonService.checkItemExist(commonService.accessList.CompanyProfile)">
+                <a class="cursor-pointer" (click)="redirectToApp('profile')">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="addressCard" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.company_profile_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.company_profile_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.TransactionPreferences)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faCogs" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.transaction_preferences_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.transaction_preferences_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3"  *ngIf="commonService.checkItemExist(commonService.accessList.MailSettings)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faEnvelopeOpenText" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.mail_settings_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.mail_settings_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3"  *ngIf="commonService.adminAppDetails && commonService.checkItemExist(commonService.accessList.UserManagement)">
+                <a class="cursor-pointer" (click)="redirectToApp('usermanagement')">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faUserShield" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div >
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.user_management_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.user_management_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="surface-card p-4 shadow-2 border-round mb-3 surface-50" *ngIf="commonService.checkItemExist(commonService.accessList.ListChartOfAccounts) || commonService.checkItemExist(commonService.accessList.ListCurrencies) || commonService.checkItemExist(commonService.accessList.DefineCalendar) || commonService.checkItemExist(commonService.accessList.TaxSettings) || commonService.checkItemExist(commonService.accessList.Accounting)">
+    <div class="text-2xl font-medium text-900">{{'settings.pages.settingpage.financial_settings_tittle'| translate}}</div>
+    <div class="surface-border border-round p-4">
+        <div class="grid">
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.ListChartOfAccounts)">
+                <a class="cursor-pointer" [routerLink]="['chart-accounts']">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faSitemap" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.chart_of_accounts_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.chart_of_accounts_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.ListCurrencies)">
+                <a class="cursor-pointer" [routerLink]="['currencies']">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faMoneyBill1" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.currencies_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.currencies_description'| translate}}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.DefineCalendar)">
+                <a class="cursor-pointer" [routerLink]="['define-calendar']">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faCalendarDays" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.define_calender_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.define_calender_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.TaxSettings)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faPercent" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.tax_setings_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.tax_setings_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.Accounting)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faCalculator" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.accounting_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.accounting_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="surface-card p-4 shadow-2 border-round mb-3 surface-50" *ngIf="commonService.checkItemExist(commonService.accessList.EmailTemplates) || commonService.checkItemExist(commonService.accessList.PrintSettings) || commonService.checkItemExist(commonService.accessList.DocumentPreferences) || commonService.checkItemExist(commonService.accessList.DocumentTemplate)">
+    <div class="text-2xl font-medium text-900">{{'settings.pages.settingpage.document_settings_tittle'| translate}}</div>
+    <div class="surface-border border-round p-4">
+        <div class="grid">
+            <div class="col-12 lg:col-6 p-3" *ngIf="commonService.checkItemExist(commonService.accessList.EmailTemplates)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faEnvelopesBulk" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.email_templates_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.email_templates_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3"  *ngIf="commonService.checkItemExist(commonService.accessList.PrintSettings)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faPrint" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.print_settings'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.print_settings_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3"  *ngIf="commonService.checkItemExist(commonService.accessList.DocumentPreferences)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faFile" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.document_preferences_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.document_preferences_description'| translate}} </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 lg:col-6 p-3"  *ngIf="commonService.checkItemExist(commonService.accessList.DocumentTemplate)">
+                <a class="cursor-pointer">
+                    <div class="p-3 border-round shadow-2 flex align-items-center surface-card">
+                        <div style="width:48px;height:48px;border-radius:10px;min-width: 48px;min-height: 48px;"
+                            class="bg-primary inline-flex align-items-center justify-content-center mr-3">
+                            <i>
+                                <fa-icon [icon]="faFileInvoice" class="text-white text-3xl mt-1"></fa-icon>
+                            </i>
+                        </div>
+                        <div>
+                            <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.settingpage.documet_template_label'| translate}}</span>
+                            <p class="mt-1 mb-0 text-600 font-medium text-sm">{{'settings.pages.settingpage.documet_template_description'| translate}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

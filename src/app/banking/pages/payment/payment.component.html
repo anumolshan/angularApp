@@ -1,0 +1,371 @@
+<div class="surface-card p-4 shadow-2 border-round mb-3">
+    <div class="text-3xl font-medium text-900 mb-3">{{'settings.pages.paymt_recipt_contra.paymt_title' | translate}}
+    </div>
+</div>
+
+<div class="surface-card p-4 shadow-2 border-round mb-3">
+    <div class="grid formgrid p-fluid">
+
+        <div class="field mb-4 col-12 md:col-4">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.voucher_label' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.voucher_label' | translate}}">
+        </div>
+
+        <div class="field mb-4 col-12 md:col-4">
+            <label for="branch" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.branch_label' | translate}}</label>
+            <p-autoComplete class="w-full" id="branch" [multiple]="false" [dropdown]="true" field="Name" [(ngModel)]="selectedBranch" [suggestions]="filteredBranchList" (completeMethod)="filteredBranch($event)"
+            placeholder="{{'place_holders.br_label' | translate}}">
+            <ng-template let-branch pTemplate="item">
+                    <div>{{branch.Name}}</div>
+            </ng-template>
+        </p-autoComplete>
+        </div>
+        <div class="field mb-4 col-12 md:col-4">
+            <label for="date" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.date_label' | translate}}</label>
+            <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy" [maxDate]="currentDate"
+                placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+            </p-calendar>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="surface-card p-4 shadow-2 border-round mb-3">
+
+    <p-tabView (onChange)="selectedTab($event)">
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.cash_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText
+                        placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="pay_ref" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.pay_ref' | translate}}</label>
+                    <input id="pay_ref" type="text" pInputText placeholder="{{'place_holders.pay_ref' | translate}}">
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.cheq_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText
+                        placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="cheq_issue" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.cheq_issue_bank' | translate}}</label>
+                    <input id="cheq_issue" type="text" pInputText
+                        placeholder="{{'place_holders.cheq_issue_bank' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="cheq_num" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.cheq_num' | translate}}</label>
+                    <input id="cheq_num" type="text" pInputText placeholder="{{'place_holders.cheq_num' | translate}}">
+                </div>
+
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="cheq_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.cheq_date' | translate}} </label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy"
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="clr_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.clr_date' | translate}} </label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy"
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="pay_stat" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.pay_stat' | translate}}</label>
+                    <p-autoComplete class="w-full" id="pay_stat" [(ngModel)]="selectedPaymentStatus"
+                        [suggestions]="filteredpayStatusList" (completeMethod)="filterPaymtStatus($event)" field="name"
+                        [dropdown]="true" [multiple]="false">
+                        <ng-template let-payment pTemplate="item">
+                            <div>{{payment.name}}</div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.transfr_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText
+                        placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="tran_id" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.trans_id' | translate}}</label>
+                    <input id="tran_id" type="text" pInputText placeholder="{{'place_holders.trans_id' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="clr_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.clr_date' | translate}}</label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy"
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+
+                </div>
+            </div>
+
+        </p-tabPanel>
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.card_pay_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText
+                        placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="card_num" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.card_num' | translate}}</label>
+                    <input id="card_num" type="text" pInputText placeholder="{{'place_holders.card_num' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="card_hold" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.card_hold_name' | translate}}</label>
+                    <input id="card_hold" type="text" pInputText
+                        placeholder="{{'place_holders.card_hold_name' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="appr_num" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.approve_num' | translate}}</label>
+                    <input id="appr_num" type="text" pInputText
+                        placeholder="{{'place_holders.approve_num' | translate}}">
+                </div>
+                <div class="field mb-4 col-12 md:col-4">
+                    <label for="clr_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.clr_date' | translate}}</label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy"
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+
+                </div>
+            </div>
+        </p-tabPanel>
+    </p-tabView>
+</div>
+
+
+
+<div class="surface-card p-4 shadow-2 border-round mb-3">
+    <div class="grid formgrid p-fluid">
+
+        <div class="field mb-4 col-12 md:col-3">
+            <label for="branch" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.cash_bank_acc' | translate}}</label>
+                <p-autoComplete  class="w-full" id="branch" [multiple]="false" [dropdown]="true" field="name"
+                placeholder="{{'place_holders.cash_bank_acc' | translate}}" [(ngModel)]="slectedCashBank" [suggestions]="filteredcashBankList" (completeMethod)="filterCashBank($event)">
+                <ng-template let-branch pTemplate="item">
+                        <div>{{branch.name}}</div>
+                </ng-template>
+            </p-autoComplete>
+        </div>
+        <div class="field mb-4 col-12 md:col-1">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.curr' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.curr' | translate}}">
+        </div>
+        <div class="field mb-4 col-12 md:col-3">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.amt' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.amt' | translate}}">
+        </div>
+        <div class="field mb-4 col-12 md:col-2">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.exchange_rate' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.exchange_rate' | translate}}">
+        </div>
+        <div class="field mb-4 col-12 md:col-3">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.amt_base_curr' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.amt_base_curr' | translate}}">
+        </div>
+    </div>
+
+</div>
+
+
+<div class="surface-card p-4 shadow-2 border-round mb-3">
+    <div class="card">
+     
+    
+        <p-table [value]="demoData"  responsiveLayout="scroll" editMode="row" styleClass="p-datatable-gridlines">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.acc' | translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.descr_narr' |
+                        translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.curr' | translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.fc' |
+                        translate}} </th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.rate' | translate}}</th>
+                    
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.debit' | translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.credit' | translate}}</th>
+                    <th  class="text-center w-1">
+                                {{'settings.pages.paymt_recipt_contra.action' | translate}}</th>
+        
+                </tr>
+        
+            </ng-template>
+            <ng-template pTemplate="body" let-transaction let-i="rowIndex" let-editing="editing">
+        
+                <tr [pEditableRow]="transaction">
+                    <td pEditableColumn [style]="{'min-width':'11rem','overflow':'visible'}">
+                        <p-autoComplete class="border-none" appendTo="body" [multiple]="false" [dropdown]="true" field="Name" placeholder="{{'place_holders.cash_bank_acc' | translate}}"
+                        [(ngModel)]="selectedAccount" [suggestions]="filteredAccountList" (completeMethod)="filteredAccount($event)">
+                        </p-autoComplete>
+                        <ng-template let-transaction pTemplate="item" >
+                            <div>{{transaction.Name}}</div>
+                    </ng-template>
+                    </td>
+                    <td pEditableColumn >
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+                                <input class="border-none" pInputText type="text"  >
+                            </ng-template>
+                            <ng-template pTemplate="output">
+        
+                                <input class="border-none" pInputText type="text" placeholder="{{'place_holders.cash_bank_narr' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+        
+                    </td>
+
+                    <td pEditableColumn   [style]="{'min-width':'11rem','overflow':'visible'}" >
+                        <p-autoComplete class="border-none" appendTo="body" [multiple]="false" [dropdown]="true" field="currency" placeholder="{{'settings.pages.add_nominal.Choose_Currency' | translate}}"
+                        [(ngModel)]="selectedCurrency" [suggestions]="filteredCurrencyList" (completeMethod)="filteredCurrency($event)">
+                        </p-autoComplete>
+                        <ng-template let-transaction pTemplate="item" >
+                            <div>{{transaction.currency}}</div>
+                        </ng-template>
+                    </td>
+
+
+
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+        
+                                <input class="border-none w-6rem" pInputText type="number">
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <span class="flex justify-content-end">
+        
+                                </span>
+                                <input class="border-none w-6rem" pInputText type="number" placeholder="{{'place_holders.fc' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+                    </td>
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+                                <input class="border-none w-6rem" pInputText type="number">
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <span class="flex justify-content-end">
+        
+                                </span>
+                                <input class="border-none w-6rem" pInputText type="number" placeholder="{{'place_holders.rate' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+                    </td>
+        
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+                                <input class="border-none w-8rem" pInputText type="number">
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <input class="border-none w-8rem" pInputText type="number" placeholder="{{'place_holders.deb_amt' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+        
+                    </td>
+        
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+        
+                                <input class="border-none w-8rem" pInputText type="number">
+        
+        
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <span class="flex justify-content-end">
+        
+                                </span>
+        
+                                <input pInputText type="number" class="border-none w-8rem" placeholder="{{'place_holders.cred_amt' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+                    </td>
+                   
+                    <td class="text-center" >
+                        <div class="flex justify-content-center  ml-4">
+                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-help" (click)="deleteRow(rowIndex)"></button>
+                        </div>
+
+                    </td>
+                </tr>
+        
+            </ng-template>
+        
+        </p-table>
+        
+    
+    </div>
+    <div class="flex justify-content-end">
+        <button pButton pRipple  icon="pi pi-plus" label="{{'buttons.add' | translate}}" class="p-button-success mr-2 mt-2 sm:w-auto min-w-max lg:w-1"
+        (click)="addRow()"></button>
+    </div>
+
+</div>
+
+
+
+<div class="grid formgrid p-fluid">
+    <div class="field mt-2 col-12 md:col-12">
+        <label class="font-medium text-900 w-full">
+            {{'settings.pages.paymt_recipt_contra.cash_bank_narr' | translate}}</label>
+        <textarea [rows]="3" id="Narration" [cols]="2" pInputTextarea autoResize="autoResize"
+            placeholder="{{'place_holders.cash_bank_narr' | translate}}"></textarea>
+    </div>
+</div>
+
+
+<div class="col-12 flex justify-content-end ml-3">
+
+    <button pButton pRipple icon="pi pi-print" label="{{'buttons.print' | translate}}"
+    class="primary mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+    <button pButton pRipple icon="pi pi-save" label="{{'buttons.save' | translate}}"
+    class="p-button-success mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+    <button pButton pRipple icon="pi pi-refresh" label="{{'buttons.clear' | translate}}"
+    class="p-button-warning mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+    <button pButton pRipple icon="pi pi-times" label="{{'buttons.exit' | translate}}"
+    class="p-button-danger mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+</div>

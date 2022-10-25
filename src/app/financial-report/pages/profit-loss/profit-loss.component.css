@@ -1,0 +1,35 @@
+.class01 {
+  background-color: var(--surface-600) !important;
+  text-align: center !important;
+  color: black !important;
+}
+
+.class02 {
+  background-color: var(--surface-500) !important;
+  text-align: center !important;
+  color: black !important;
+}
+
+.class03 {
+  background-color: var(--surface-400) !important;
+  text-align: center !important;
+  color: black !important;
+}
+
+.class04 {
+  background-color: orange !important;
+  text-align: center !important;
+  color: black !important;
+}
+
+.class05 {
+  background-color: blue !important;
+  text-align: center !important;
+  color: black !important;
+}
+
+.leafClass {
+  background-color: var(--surface-50) !important;
+  text-align: center !important;
+  color: black !important;
+}

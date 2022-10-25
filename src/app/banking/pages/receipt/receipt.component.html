@@ -1,0 +1,593 @@
+<div class="surface-card  p-1 shadow-2 border-round mb-1">
+    <div class="text-3xl font-medium text-900 mb-1">{{'settings.pages.paymt_recipt_contra.recipt_title' | translate}}</div>   
+</div>
+<div class="surface-card  shadow-2 border-round mb-1">
+    <div class="grid formgrid p-fluid flex justify-content-evenly flex-wrap">
+
+        <div class="field  col-12 md:col-4 mb-1">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.voucher_label' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.voucher_label' | translate}}">
+        </div>
+
+        <div class="field  col-12 md:col-4 mb-1">
+            <label for="branch" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.branch_label' | translate}}</label>
+            <p-autoComplete class="w-full" id="branch" [multiple]="false" [dropdown]="true" field="Name" [(ngModel)]="selectedBranch" [suggestions]="filteredBranchList" (completeMethod)="filteredBranch($event)"
+                placeholder="{{'place_holders.br_label' | translate}}">
+                <ng-template let-branch pTemplate="item">
+                        <div>{{branch.Name}}</div>
+                </ng-template>
+            </p-autoComplete>
+        </div>
+        
+        <div class="field  col-12 md:col-4 mb-1">
+            <label for="date" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.date_label' | translate}}</label>
+            <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy" [maxDate]="currentDate"
+                placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}" [(ngModel)]="mainDate" >
+            </p-calendar>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="surface-card  shadow-2 border-round mb-1">
+   
+    <p-tabView (onChange)="selectedTab($event)">
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.cash_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}} <span class="text-orange-500">*</span></label>
+                    <input id="payee_name" type="text" pInputText placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="pay_ref" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.pay_ref' | translate}}</label>
+                    <input id="pay_ref" type="text" pInputText placeholder="{{'place_holders.pay_ref' | translate}}">
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.cheq_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="cheq_issue" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.cheq_issue_bank' | translate}}</label>
+                    <input id="cheq_issue" type="text" pInputText placeholder="{{'place_holders.cheq_issue_bank' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="cheq_num" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.cheq_num' | translate}}</label>
+                    <input id="cheq_num" type="text" pInputText placeholder="{{'place_holders.cheq_num' | translate}}">
+                </div>
+               
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="cheq_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.cheq_date' | translate}} </label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy" 
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+        
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="clr_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.clr_date' | translate}} </label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy" 
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+        
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="pay_stat" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.pay_stat' | translate}}</label>
+                    <p-autoComplete class="w-full" id="pay_stat" [(ngModel)]="selectedPaymentStatus" [suggestions]="filteredpayStatusList" (completeMethod)="filterPaymtStatus($event)" field="name" [dropdown]="true" [multiple]="false">
+                        <ng-template let-payment pTemplate="item">
+                                <div>{{payment.name}}</div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.transfr_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="tran_id" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.trans_id' | translate}}</label>
+                    <input id="tran_id" type="text" pInputText placeholder="{{'place_holders.trans_id' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="clr_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.clr_date' | translate}}</label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy" 
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+        
+                </div>
+            </div>
+          
+        </p-tabPanel>
+        <p-tabPanel header="{{'settings.pages.paymt_recipt_contra.tabs.card_pay_title' | translate}}">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="payee_name" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.payee_label' | translate}}</label>
+                    <input id="payee_name" type="text" pInputText placeholder="{{'place_holders.payee_label' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="card_num" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.card_num' | translate}}</label>
+                    <input id="card_num" type="text" pInputText placeholder="{{'place_holders.card_num' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="card_hold" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.card_hold_name' | translate}}</label>
+                    <input id="card_hold" type="text" pInputText placeholder="{{'place_holders.card_hold_name' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="appr_num" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.approve_num' | translate}}</label>
+                    <input id="appr_num" type="text" pInputText placeholder="{{'place_holders.approve_num' | translate}}">
+                </div>
+                <div class="field mb-1 col-12 md:col-4">
+                    <label for="clr_date" class="font-medium text-900 w-full">
+                        {{'settings.pages.paymt_recipt_contra.tabs.clr_date' | translate}}</label>
+                    <p-calendar [showIcon]="true" inputId="date" dateFormat="dd-M-yy" 
+                        placeholder="{{'place_holders.date_label' | translate}}" [style]="{'width': '100%'}">
+                    </p-calendar>
+        
+                </div>
+            </div>
+        </p-tabPanel>
+    </p-tabView>
+</div>
+<div class="surface-card  shadow-2 border-round mb-3">
+    <div class="grid formgrid p-fluid">
+
+        <div class="field mb-1 col-12 md:col-2">
+            <label for="branch" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.acc' | translate}}</label>
+            <p-autoComplete  class="w-full" id="branch" [multiple]="false" [dropdown]="true" field="name"
+            placeholder="{{'place_holders.cash_bank_acc' | translate}}" [(ngModel)]="slectedCashBank" [suggestions]="filteredcashBankList" (completeMethod)="filterCashBank($event)"
+            (onSelect)="selectAccountType($event)" pTooltip="{{slectedCashBankacc}}" tooltipPosition="top">
+            <ng-template let-branch pTemplate="item">
+                    <div>{{branch.name}}</div>
+            </ng-template>
+        </p-autoComplete>
+        </div>
+        <div class="field mb-1 col-12 md:col-2">
+            <label class="font-medium text-900 w-full">
+                {{'settings.pages.view_journal.narration' | translate}}</label>
+            <textarea [rows]="1" id="Narration" [cols]="2" pInputTextarea autoResize="autoResize" [(ngModel)]="selectedNarration"
+                placeholder="{{'place_holders.cash_bank_narr' | translate}}" pTooltip= "{{selectedNarration}}" tooltipPosition="top"></textarea>
+        </div>
+        <div class="field mb-1 col-12 md:col-1">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.paymt_recipt_contra.curr' | translate}}</label>
+            <input id="voucher" type="text" [readonly]="true" [(ngModel)]="selectedCurrofAcc" pInputText placeholder="{{'place_holders.curr' | translate}}">
+        </div>
+        <div class="field mb-1 col-12 md:col-2">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.view_daybook.fc_amt' |
+                translate}}</label>
+            <input id="voucher" type="text"  pInputText placeholder="{{'place_holders.amt' | translate}}">
+        </div>
+        <div class="field mb-1 col-12 md:col-1">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.journal_voucher.Rate' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.rate' | translate}}">
+        </div>
+        <div class="field mb-1 col-12 md:col-1">
+            <label for="voucher" class="font-medium text-900 w-full">
+                {{'settings.pages.view_journal.amt' | translate}}</label>
+            <input id="voucher" type="text" pInputText placeholder="{{'place_holders.amt_base_curr' | translate}}">
+        </div>
+    </div>
+
+</div>
+<!-- <div class="surface-card p-2 shadow-2 border-round mb-3">
+    <div class="card">
+       
+
+        <p-table [value]="demoData" responsiveLayout="scroll" editMode="row" styleClass="p-datatable-gridlines">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.acc' | translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.descr_narr' |
+                        translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.curr' | translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.fc' |
+                        translate}} </th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.rate' | translate}}</th>
+                    
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.debit' | translate}}</th>
+                    <th class="text-center">{{'settings.pages.paymt_recipt_contra.credit' | translate}}</th>
+                    <th  class="text-center w-1">
+                                {{'settings.pages.paymt_recipt_contra.action' | translate}}</th>
+        
+                </tr>
+        
+            </ng-template>
+            <ng-template pTemplate="body" let-transaction let-i="rowIndex" let-editing="editing">
+        
+                <tr [pEditableRow]="transaction">
+                    <td pEditableColumn   [style]="{'min-width':'11rem','overflow':'visible'}" >
+                        <p-autoComplete class="border-none" appendTo="body" [multiple]="false" [dropdown]="true" field="name" placeholder="{{'place_holders.cash_bank_acc' | translate}}"
+                        [(ngModel)]="selectedAccount" [suggestions]="filteredAccountList" (completeMethod)="filteredAccount($event)">
+                        </p-autoComplete>
+                        <ng-template let-transaction pTemplate="item" >
+                            <div>{{transaction.Name}}</div>
+                        </ng-template>
+                    </td>
+                    <td pEditableColumn >
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+                                <input class="border-none" pInputText type="text"  >
+                            </ng-template>
+                            <ng-template pTemplate="output">
+        
+                                <input class="border-none" pInputText type="text" placeholder="{{'place_holders.cash_bank_narr' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+        
+                    </td>
+
+                    <td pEditableColumn   [style]="{'min-width':'11rem','overflow':'visible'}" >
+                        <p-autoComplete class="border-none" appendTo="body" [multiple]="false" [dropdown]="true" field="currency" placeholder="{{'settings.pages.add_nominal.Choose_Currency' | translate}}"
+                        [(ngModel)]="selectedCurrency" [suggestions]="filteredCurrencyList" (completeMethod)="filteredCurrency($event)">
+                        </p-autoComplete>
+                        <ng-template let-transaction pTemplate="item" >
+                            <div>{{transaction.currency}}</div>
+                        </ng-template>
+                    </td>
+
+
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+        
+                                <input class="border-none w-6rem" pInputText type="number">
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <span class="flex justify-content-end">
+        
+                                </span>
+                                <input class="border-none w-6rem" pInputText type="number" placeholder="{{'place_holders.fc' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+                    </td>
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+                                <input class="border-none w-6rem" pInputText type="number">
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <span class="flex justify-content-end">
+        
+                                </span>
+                                <input class="border-none w-6rem" pInputText type="number" placeholder="{{'place_holders.rate' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+                    </td>
+        
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+                                <input class="border-none w-8rem" pInputText type="number">
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <input class="border-none w-8rem" pInputText type="number" placeholder="{{'place_holders.deb_amt' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+        
+                    </td>
+        
+                    <td pEditableColumn>
+                        <p-cellEditor>
+                            <ng-template pTemplate="input">
+        
+                                <input class="border-none w-8rem" pInputText type="number">
+        
+        
+                            </ng-template>
+                            <ng-template pTemplate="output">
+                                <span class="flex justify-content-end">
+        
+                                </span>
+        
+                                <input pInputText type="number" class="border-none w-8rem" placeholder="{{'place_holders.cred_amt' | translate}}">
+        
+                            </ng-template>
+                        </p-cellEditor>
+                    </td>
+                   
+                    <td class="text-center" >
+                        <div class="flex justify-content-center  ml-4">
+                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-help" (click)="deleteRow(rowIndex)"></button>
+                        </div>
+
+                    </td>
+                </tr>
+        
+            </ng-template>
+        
+        
+        </p-table>
+
+
+    </div>
+    <div class="flex justify-content-end">
+        <button pButton pRipple  icon="pi pi-plus" label="{{'buttons.add' | translate}}" class="p-button-success mr-2 mt-2 sm:w-auto min-w-max lg:w-1"
+        (click)="addRow()"></button>
+    </div>
+</div> -->
+
+<div class="container customised-datatable" id="component1" >
+    <p-table [value]="journalVoucherData.entries" responsiveLayout="scroll" editMode="row"
+    styleClass="p-datatable-gridlines">
+    <ng-template pTemplate="header">
+        <tr>
+            <th class="text-center" >{{'settings.pages.journal_voucher.Account' | translate}}</th>
+            <th class="text-center" >{{'settings.pages.journal_voucher.Description_Narration' |
+                translate}}</th>
+            <th class="text-center" >{{'settings.pages.journal_voucher.Currency' | translate}}</th>
+            <th class="text-center" >{{'settings.pages.journal_voucher.Foreign_Currency' |
+                translate}} </th>
+            <th class="text-center w-1" >{{'settings.pages.journal_voucher.Rate' | translate}}</th>
+            <th class="text-center">{{'settings.pages.paymt_recipt_contra.debit' | translate}}</th>
+            <th class="text-center">{{'settings.pages.paymt_recipt_contra.credit' | translate}}</th>
+            <th *ngIf="type != 'view'" class="text-center w-1" >
+                {{'settings.pages.journal_voucher.Action' | translate}}</th>
+
+        </tr>
+        
+    </ng-template>
+    <ng-template pTemplate="body" let-transaction let-i="rowIndex" let-editing="editing">
+
+        <tr [pEditableRow]="transaction">
+            <td pEditableColumn>
+                <p-autoComplete appendTo="body" [(ngModel)]="transaction.account" placeholder="{{'settings.pages.account_ledger.choose_account' | translate}}"
+                    (onSelect)="selectAccount($event,i,transaction)" [suggestions]="filteredItems"
+                    [dropdown]="false" (completeMethod)="filterItems($event)" field="AccCodeName"
+                    (keydown.Tab)="setFocus(i,transaction,'lineDec')"
+                    (keydown.enter)="setFocus(i,transaction,'lineDec')" inputId="{{'account'+i}}" [dropdown]="true"
+                    pTooltip="{{transaction?.account?.name}}" tooltipPosition="top"> 
+                </p-autoComplete>
+            </td>
+            <td pEditableColumn>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <input class="border-none" pInputText type="text" id="{{'lineDec'+i}}"
+                            [readonly]="transaction.account == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.lineNarration"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            (keydown.enter)="focusOutLineNarration(i,transaction,'lineNarration')"
+                            (keydown.tab)="focusOutLineNarration(i,transaction,'lineNarration')"
+                            pTooltip="{{transaction?.lineNarration}}" tooltipPosition="top"
+                           >
+                    </ng-template>
+                    <ng-template pTemplate="output">
+
+                        <input class="border-none" pInputText type="text" value="{{transaction.lineNarration}}"
+                            id="{{'lineDec'+i}}"
+                            [readonly]="transaction.account == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.lineNarration"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            (keydown.enter)="focusOutLineNarration(i,transaction,'lineNarration')"
+                            (keydown.tab)="focusOutLineNarration(i,transaction,'lineNarration')"
+                            pTooltip="{{transaction.lineNarration}}" tooltipPosition="top"
+                         >
+
+                    </ng-template>
+                </p-cellEditor>
+
+            </td>
+            <td>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <input pInputText type="text" [(ngModel)]="transaction.currency"
+                            [style]="{'width':'100%','overflow':'visible'}">
+                    </ng-template>
+                    <ng-template pTemplate="output">
+                        {{transaction.currency}}
+                    </ng-template>
+                </p-cellEditor>
+
+            </td>
+            <!-- Foreign Currency Section -->
+            <td pEditableColumn>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+
+                        <input class="border-none" pInputText type="number" [min]="0"
+                        step="1"
+                        onkeypress="return  event.charCode <= 57"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            [ngStyle]="{'display':transaction.currency == branchBaseCurrency || transaction.foreign_credit != null || transaction.currency == null || transaction.account.no == undefined ? 'none' : 'block' }"
+                            [readonly]="transaction.currency == branchBaseCurrency || transaction.foreign_credit != null || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.foreign_debit" [minFractionDigits]="2"
+                            [maxFractionDigits]="4"
+                            (keydown.enter)="rateCalculate(event, transaction);focusOutLineNarration(i,transaction,'fd')"
+                            (focusout)="rateCalculate(event, transaction);focusOutLineNarration(i,transaction,'fd')">
+                    </ng-template>
+                    <ng-template pTemplate="output">
+                        <span *ngIf="transaction.foreign_debit && transaction.isValidForeignDebit"
+                            class="flex justify-content-end">
+                            {{transaction.foreign_debit | currency:branchBaseCurrency:'':'1.2-2'}}
+                        </span>
+                        <input *ngIf="!transaction.isValidForeignDebit" class="border-none" pInputText
+                            type="number" [min]="0" step="1"
+                            onkeypress="return  event.charCode <= 57" [style]="{'width':'100%','overflow':'visible'}"
+                            [readonly]="transaction.currency == branchBaseCurrency || transaction.foreign_credit != null || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.foreign_debit" [minFractionDigits]="2"
+                            [maxFractionDigits]="4"
+                            (keydown.enter)="rateCalculate(event, transaction);focusOutLineNarration(i,transaction,'fd')"
+                            (focusout)="rateCalculate(event, transaction);focusOutLineNarration(i,transaction,'fd')">
+
+                    </ng-template>
+                </p-cellEditor>
+            </td>
+        
+
+            <td pEditableColumn>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <input class="border-none" id="{{'rate'+i}}" pInputText type="number" [min]="0" 
+                        step="1"
+                        onkeypress="return  event.charCode <= 57"
+                        [ngStyle]="{'display':transaction.currency == branchBaseCurrency || transaction.currency == null || transaction.account.no == undefined ? 'none' : 'block'}"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            [readonly]="transaction.currency == branchBaseCurrency || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.rateOfExchange" [minFractionDigits]="4"
+                            [maxFractionDigits]="4"
+                            (keydown.enter)="addRow(i,'rate',transaction);focusOutLineNarration(i,transaction,'rate');rateCalculate($event,transaction);"
+                            (focusout)="addRow(i,'rate',transaction);focusOutLineNarration(i,transaction,'rate');rateCalculate($event,transaction);">
+                    </ng-template>
+                    <ng-template pTemplate="output">
+                        <input class="border-none" pInputText type="number" id="{{'rate'+i}}" [min]="0"
+                        step="1"
+                        onkeypress="return  event.charCode <= 57"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            [readonly]="transaction.currency == branchBaseCurrency || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.rateOfExchange" [minFractionDigits]="4"
+                            [maxFractionDigits]="4"
+                            (keydown.enter)="addRow(i,'rate',transaction);focusOutLineNarration(i,transaction,'rate');rateCalculate($event,transaction);"
+                            (focusout)="addRow(i,'rate',transaction);focusOutLineNarration(i,transaction,'rate');rateCalculate($event,transaction);">
+
+                    </ng-template>
+                </p-cellEditor>
+
+            </td>
+            <!-- Base Currency Section -->
+            <td pEditableColumn>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+
+                        <input class="border-none" id="baseDebit{{i}}" pInputText type="number" [min]="0" step="1"
+                        onkeypress="return  event.charCode <= 57"
+                            [ngStyle]="{'display':transaction.base_credit != null || transaction.currency == null || transaction.account.no == undefined ? 'none' : 'block'}"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            [readonly]="transaction.currency != branchBaseCurrency || transaction.base_credit != null || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.base_debit"
+                            (keydown.enter)="addRow(i,'debit',transaction);totalCalculate();totalCalculate();focusOutLineNarration(i,transaction,'baseDebit')"
+                            (focusout)="addRow(i,'debit',transaction);totalCalculate();focusOutLineNarration(i,transaction,'baseDebit')"
+                            mode="decimal" locale="en-US">
+
+
+                    </ng-template>
+                    <ng-template pTemplate="output">
+                        <span *ngIf="transaction.base_debit && transaction.isValidBaseDebit"
+                            class="flex justify-content-end">
+                            {{transaction.base_debit | currency:branchBaseCurrency:'':'1.2-2'}}
+                        </span>
+
+                        <input *ngIf="!transaction.isValidBaseDebit" class="border-none" id="baseDebit{{i}}"
+                            pInputText type="number" [min]="0" step="1"
+                            onkeypress="return  event.charCode <= 57" [style]="{'width':'100%','overflow':'visible'}"
+                            [(ngModel)]="transaction.base_debit"
+                            [readonly]="transaction.currency != branchBaseCurrency || transaction.base_credit != null || transaction.currency == null || transaction.account.no == undefined"
+                            (keydown.enter)="addRow(i,'debit',transaction);totalCalculate();totalCalculate();focusOutLineNarration(i,transaction,'baseDebit')"
+                            (focusout)="addRow(i,'debit',transaction);totalCalculate();focusOutLineNarration(i,transaction,'baseDebit')">
+
+                    </ng-template>
+                </p-cellEditor>
+            </td>
+            <td pEditableColumn>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <input class="border-none" pInputText type="number" [min]="0"
+                        step="1"
+                            onkeypress="return  event.charCode <= 57"
+                            [style]="{'width':'100%','overflow':'visible'}"
+                            [ngStyle]="{'display':transaction.base_debit != null || transaction.currency == null || transaction.account.no == undefined ? 'none' : 'block'}"
+                            [readonly]="transaction.currency != branchBaseCurrency || transaction.base_debit != null || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.base_credit" [minFractionDigits]="2"
+                            [maxFractionDigits]="4"
+                            (keydown.enter)="addRow(i,'credit',transaction);totalCalculate();totalCalculate();focusOutLineNarration(i,transaction,'baseCredit')"
+                            (focusout)="addRow(i,'credit',transaction);totalCalculate();focusOutLineNarration(i,transaction,'baseCredit')">
+                    </ng-template>
+                    <ng-template pTemplate="output">
+                        <span *ngIf="transaction.base_credit && transaction.isValidBaseCredit"
+                            class="flex justify-content-end">
+                            {{transaction.base_credit | currency:branchBaseCurrency:'':'1.2-2'}}
+                        </span>
+                        <input *ngIf="!transaction.isValidBaseCredit" class="border-none" pInputText
+                            type="number" [min]="0" step="1"
+                            onkeypress="return  event.charCode <= 57" [style]="{'width':'100%','overflow':'visible'}"
+                            [readonly]="transaction.currency != branchBaseCurrency || transaction.base_debit != null || transaction.currency == null || transaction.account.no == undefined"
+                            [(ngModel)]="transaction.base_credit" [minFractionDigits]="2"
+                            [maxFractionDigits]="4"
+                            (keydown.enter)="addRow(i,'credit',transaction);totalCalculate();totalCalculate();focusOutLineNarration(i,transaction,'baseCredit')"
+                            (focusout)="addRow(i,'credit',transaction);totalCalculate();focusOutLineNarration(i,transaction,'baseCredit')">
+
+                    </ng-template>
+                </p-cellEditor>
+
+            </td>
+            <td class="text-center" *ngIf="type != 'view'">
+                <div class="flex justify-content-center  ml-4">
+                    <button pButton pRipple icon="pi pi-trash" (click)="deleteRow(i,transaction)"
+                        class="p-button-rounded p-button-help"></button>
+                </div>
+            </td>
+        </tr>
+
+    </ng-template>
+    <!-- <ng-template pTemplate="footer">
+        <tr *ngIf="branchBaseCurrency!=''">
+            <td colspan="8">
+                <div class="flex justify-content-between text-center">
+                    <span>
+                        <span>{{'settings.pages.journal_voucher.To_Allocate' | translate}}</span>
+                        <span> {{toAllocateValue | currency:branchBaseCurrency:false }} {{toAllocateValue != 0 ?
+                            totalCreditValue > totalDebitValue ? 'Dr':'Cr' : ''}} </span>
+                    </span>
+                    <span>
+                        <span> {{'settings.pages.journal_voucher.Total' | translate}}</span>
+                        <span> : {{totalDebitValue | currency:branchBaseCurrency:true}} Dr | {{totalCreditValue
+                            | currency:branchBaseCurrency:true }} Cr </span>
+                    </span>
+                </div>
+            </td>
+            <td *ngIf="type != 'view'">
+                <div class="flex justify-content-center  ml-4">
+                    <button pButton pRipple
+                        [disabled]="journalVoucherData.entries.length >= 1 && (journalVoucherData.entries[journalVoucherData.entries.length-1].base_credit == null && journalVoucherData.entries[journalVoucherData.entries.length-1].base_debit == null)"
+                        icon="pi pi-plus" label="{{'settings.pages.journal_voucher.add' | translate}}"
+                        (click)="addRow(journalVoucherData.entries.length,'button','')"
+                        class="p-button-success mr-2 mt-2 sm:w-auto min-w-max lg:w-1"></button>
+                </div>
+
+            </td>
+        </tr>
+    </ng-template> -->
+</p-table>
+
+
+</div>
+<div class="col-12 flex justify-content-end ml-3">
+
+    <button pButton pRipple icon="pi pi-print" label="{{'buttons.print' | translate}}"
+        class="primary mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+        <button pButton pRipple icon="pi pi-save" label="{{'buttons.save' | translate}}"
+        class="p-button-success mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+        <button pButton pRipple icon="pi pi-refresh" label="{{'buttons.clear' | translate}}"
+        class="p-button-warning mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "></button>
+        <button pButton pRipple icon="pi pi-times" label="{{'buttons.exit' | translate}}"
+        class="p-button-danger mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "  [routerLink]="['/banking/view-receipt']"></button>
+</div>

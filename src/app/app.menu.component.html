@@ -1,0 +1,17 @@
+<div class="layout-sidebar" [ngClass]="{'layout-sidebar-active': appMain.sidebarActive, 'layout-sidebar-dark': app.darkMenu}"
+    (click)="appMain.onSidebarClick($event)" (mouseover)="appMain.sidebarActive=!appMain.isMobile()" (mouseleave)="appMain.sidebarActive=false">
+    <div class="sidebar-logo">
+        <a href="#">
+            <!-- <img alt="logo" src="assets/layout/images/Logo.png" /> -->
+            <img alt="logo" [src]="commonService?.profileDetails?.Logo" />
+            <!-- <span class="app-name">SERENITY</span> -->
+        </a>
+        <a href="#" class="sidebar-anchor" title="Toggle Menu" (click)="appMain.onToggleMenuClick($event)"></a>
+    </div>
+
+    <ul class="layout-menu" (click)="onMenuClick()">
+        <ng-container *ngFor="let item of commonService.model; let i = index;">
+            <li app-menuitem *ngIf="!item.separator && item.visible !== false" [item]="item" [index]="i" [root]="true"></li>
+        </ng-container>
+    </ul>
+</div>

@@ -1,0 +1,244 @@
+<div class="card">
+    <div class="row flex justify-content-between">
+        <h3> {{'settings.pages.account_ledger.breadcrumbs.breadcrumb2' | translate}}</h3>
+        <button class="mb-3 justify-content-end" pButton type="button" pButton id="search" pRipple icon="pi pi-arrow-left" icon="pi pi-download" 
+        label="{{'xls'}}" (click)="exportExcel()" *ngIf="ledgerStatementData && ledgerStatementData.entries.length > 0 && isSearched"></button>
+
+        </div>
+        <!-- <div class="row flex justify-content-end" *ngIf="ledgerStatementData && ledgerStatementData.entries.length > 0 && isSearched"> -->
+            <!-- <button class="mb-3" pButton type="button" pButton id="search" pRipple icon="pi pi-arrow-left" icon="pi pi-download" label="{{'xls'}}" (click)="exportExcel()"></button> -->
+            <!-- <button type="button" pButton pRipple icon="pi pi-file"  class="mr-2" pTooltip="CSV" tooltipPosition="bottom"></button> -->
+            <!-- <button type="button" pButton pRipple icon="pi pi-file-excel"  class="p-button-success mr-2" (click)="exportExcel()"  pTooltip="XLS" tooltipPosition="bottom"></button> -->
+            <!-- <button type="button" pButton pRipple icon="pi pi-file-pdf"  class="p-button-warning mr-2" (click)="exportPdf()" pTooltip="PDF" tooltipPosition="bottom"></button> -->
+        <!-- </div> -->
+    <div class="row"  *ngIf="!isSearched ">
+        <div class="flex align-items-baseline grid col-12">
+            <div class="field mb-4 col-12 md:col-2">
+                <label for="from" class="font-medium text-900 w-full">{{'settings.pages.account_ledger.from'| translate}} <span class="text-orange-500">*</span></label>
+
+                <p-calendar   [maxDate]="currentDate" id="from" [showIcon]="true" inputId="from" dateFormat="dd-M-yy"
+                    placeholder="{{'settings.pages.view_journal.from_placeholder' | translate}}"
+                    [style]="{'width': '100%'}" [(ngModel)]="fromDate"></p-calendar>
+            </div>
+            <div class="field mb-4 col-12 md:col-2">
+                <label for="to" class="font-medium text-900 w-full">{{'settings.pages.account_ledger.to' | translate}} <span class="text-orange-500">*</span></label>
+
+                <p-calendar   id="to" [showIcon]="true" [minDate]="fromDate" [maxDate]="currentDate" dateFormat="dd-M-yy" inputId="to"
+                    placeholder="{{'settings.pages.view_journal.to_placeholder' | translate}}"
+                    [style]="{'width': '100%'}" [(ngModel)]="toDate"></p-calendar>
+            </div>
+            <div class="field  col-12 md:col-3">
+                <label for="account" class="font-medium text-900 w-full">{{'settings.pages.account_ledger.ledger_account' | translate}} <span class="text-orange-500">*</span></label>
+
+                <p-dropdown   id="account" [filter]="true" filterBy="name" [options]="accountsList" [(ngModel)]="ledgerAccounts"
+                    [style]="{'width':'100%','overflow':'visible'}" optionLabel="name" placeholder="{{'settings.pages.account_ledger.choose_account' | translate}}" (onChange)="accountOnChange($event)">
+                </p-dropdown>
+
+            </div>
+            <div class="field  col-12 md:col-3">
+                <label for="report" class="font-medium text-900 w-full">{{'settings.pages.account_ledger.Report_Type' | translate}}</label>
+
+                <p-dropdown   id="report" [filter]="true" filterBy="name" [options]="reportType"
+                    [style]="{'width':'100%','overflow':'visible'}" optionLabel="name" placeholder="{{'settings.pages.account_ledger.choose_type' | translate}}" [(ngModel)]="report">
+                </p-dropdown>
+
+            </div>
+
+            <!-- <div class="flex align-items-center field mb-4 col-12 md:col-2 m-auto">
+
+
+                <button pButton id="search" pRipple icon="pi pi-search" [disabled]="!(fromDate && ledgerAccounts && toDate &&  report)"
+                    label="{{'settings.pages.view_journal.search_button' | translate}}" (click)="getLedgerAccountStatements()"></button>
+                    <div class="flex align-items-baseline m-auto" >
+                        <button *ngIf="fromDate || ledgerAccounts || toDate ||  report" pButton id="search" pRipple icon="pi pi-times" 
+                             (click)="clear()"></button>
+        
+                    </div>
+                
+            </div> -->
+            <div class="flex  align-items-baseline field col-10  md:col-2 m-auto" style="margin-top: 30px !important;">
+                <button pButton id="search" pRipple icon="pi pi-search" [disabled]="!(fromDate && ledgerAccounts?.name && toDate &&  report?.label)"
+                label="{{'settings.pages.view_journal.search_button' | translate}}" (click)="getLedgerAccountStatements()"></button>
+                <div class="flex align-items-baseline m-auto" >
+                    <button *ngIf="isSearched" pButton id="search" pRipple icon="pi pi-times" 
+                    (click)="clear()"></button>
+            </div>
+        </div>
+    
+    </div>
+
+
+</div>
+
+
+
+
+
+<div class="card" *ngIf="ledgerStatementData && ledgerStatementData.entries.length > 0 && isSearched" class="customised-datatable    ">
+
+    <!-- <div class="card">
+        <div class="grid col-12">
+            <div class="col-12 md:col-2">
+                <img [src]="commonService.profileDetails.LogoSquare">
+            </div>
+            <div class="col-12 md:col-6">
+                <span><strong>{{commonService.profileDetails.Name}}</strong></span><br>
+                <span class="pt-2">{{commonService.profileDetails.Address}}</span><br>
+                <span class="pt-2">{{commonService.profileDetails.Email}}</span><br>
+                <span class="pt-2">{{commonService.profileDetails.PhoneNo}}</span>
+            </div>
+
+        </div>
+    </div> -->
+
+
+    <!-- <div class="card">
+        <div class="row flex justify-content-center">
+            <h3> {{'settings.pages.account_ledger.breadcrumbs.breadcrumb2' | translate}}</h3>
+            </div>
+    </div> -->
+  
+
+    <div class="card p-0" *ngIf="ledgerStatementData">
+        <div class="flex align-items-baseline grid col-12">
+            <div class="flex align-items-center grid col-8">
+                <span class="flex align-items-baseline col-12 md:col-3"><strong>{{'settings.pages.account_ledger.AccountNumber' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-7">: {{accountNumberShow}}</span>
+    
+    
+                <span class="flex align-items-baseline col-12 md:col-3"><strong>{{'settings.pages.account_ledger.account_name' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-7">: {{account}}</span>
+    
+                <span class="flex align-items-baseline col-12 md:col-3"><strong>{{'settings.pages.account_ledger.period' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-7">: {{ledgerStatementData.fromDate}}&nbsp; &nbsp; To &nbsp; &nbsp;{{ledgerStatementData.toDate}}</span>
+            </div>
+    
+    
+            <div class="flex align-items-center grid col-4">
+                <span class="flex align-items-baseline col-12 md:col-6"><strong>{{'settings.pages.account_ledger.printdate' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-6">: {{convertDateTimeFormart(currentDate)}}</span>
+
+                <span class="flex align-items-baseline col-12 md:col-6"><strong>{{'settings.pages.account_ledger.Currency' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-6">: {{currency}}</span>
+    
+    
+                <!-- <span class="flex align-items-baseline col-12 md:col-6"><strong>{{'settings.pages.account_ledger.From_Date' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-6">: {{ledgerStatementData.fromDate}}</span> -->
+    
+                <!-- <span class="flex align-items-baseline col-12 md:col-6"><strong>{{'settings.pages.account_ledger.To_Date' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-6">: {{ledgerStatementData.toDate}}</span> -->
+
+                <span class="flex align-items-baseline col-12 md:col-6"><strong>{{'settings.pages.account_ledger.Balance' | translate}}</strong></span>
+                <span class="flex align-items-baseline col-12 md:col-6">: {{absoluuteValue(ledgerStatementData.openingBalance)}}</span>
+            </div>
+        </div>
+    
+    
+    
+    </div>
+
+
+
+    <p-table [value]="ledgerStatementData.entries" #dt [lazy]="false" (onLazyLoad)="loadJvData($event)" 
+    styleClass="p-datatable-gridlines p-datatable-striped" currentPageReportTemplate="Showing {first} to {last} of {{totalRecords}} entries" responsiveLayout="scroll" dataKey="id"  [paginator]="true"
+     [rows]="50" [totalRecords]="totalRecords" [loading]="false" [rowsPerPageOptions]="[50,75,100]" [showCurrentPageReport]="true" 
+     [globalFilterFields]="['date','transactionId','lineNarration','amount','amount','balance']">
+
+        <ng-template pTemplate="header">
+            <tr>
+
+                <th class="surface-50" style="max-width: 107px;" [attr.rowspan]="report.label == 1 ? 2 : 1">
+                   <!-- <span class="block text-center"> </span> -->
+                   {{'settings.pages.account_ledger.Date'| translate}}
+                        <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'date', 'contains')"
+                        style="width:-webkit-fill-available;">
+                </th>
+                <th class="surface-50 w-1" [attr.rowspan]="report.label == 1 ? 2 : 1">{{'settings.pages.account_ledger.Reference'| translate}}
+                    <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'transactionId', 'contains')"
+                    style="width: 80px;">
+                </th>
+                <th class="surface-50 w-2" [attr.rowspan]="report.label == 1 ? 2 : 1">{{'settings.pages.account_ledger.Document_No'| translate}}
+                    <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'', 'contains')"
+                    style="width:-webkit-fill-available;">
+                </th>
+                <th class="surface-50 w-5" [attr.rowspan]="report.label == 1 ? 2 : 1">{{'settings.pages.account_ledger.Narration'| translate}}
+                    <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'lineNarration', 'contains')"
+                    style="width:-webkit-fill-available;">
+                </th>
+                <th [attr.colspan]="report.label == 1 ? 2 : 1" class="text-center surface-50" style="max-width: 107px;">{{'settings.pages.account_ledger.Debit' | translate}}
+                    <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'amount', 'contains')"
+                        style="width:-webkit-fill-available;">
+                </th>
+                <th [attr.colspan]="report.label == 1 ? 2 : 1" class="text-center surface-50" style="max-width: 107px;">{{'settings.pages.account_ledger.Credit' | translate}}
+                    <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'amount', 'contains')"
+                    style="width:-webkit-fill-available;">
+                </th>
+                <th [attr.colspan]="report.label == 1 ? 2 : 1" class="text-center surface-50 w-auto">{{'settings.pages.account_ledger.balance_table' | translate}}
+                <input class="custom_input" pInputText type="text" (input)="dt.filter($event.target.value,'balance', 'contains')"
+                    style="width: 85px;">
+                </th>
+                <!-- <th class="surface-50"></th> -->
+            </tr>
+            <tr *ngIf="report.label == 1">
+                    <th *ngIf="report.label == 2 || report.label == 1" class="text-center surface-50 w-auto">{{'F/C' | translate}}</th>
+                    <th *ngIf="report.label == 3 || report.label == 1" class="text-center surface-50 w-auto">{{'B/C' | translate}}</th>    
+                    <th *ngIf="report.label == 2 || report.label == 1" class="text-center surface-50 w-auto">{{'F/C' | translate}}</th>
+                    <th *ngIf="report.label == 3 || report.label == 1" class="text-center surface-50 w-auto">{{'B/C' | translate}}</th>      
+                    <th *ngIf="report.label == 2 || report.label == 1" class="text-center surface-50 w-auto">{{'F/C' | translate}}</th>
+                    <th *ngIf="report.label == 3 || report.label == 1" class="text-center surface-50 w-auto">{{'B/C' | translate}}</th>    
+                    <!-- <th class="surface-50"></th>   -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ledger let-rowIndex="rowIndex">
+            <tr>
+
+                <td style="max-width: 107px;">{{ledger.date}}</td>    
+                <td class="w-1">{{ledger.transactionId !== null ?convertToReference(ledger.transactionId):""}}</td>
+                <td class="w-2">{{""}}</td>
+                <td class="w-3">{{ledger.lineNarration}}</td>
+                <td style="max-width: 107px;" class="text-right" *ngIf="report.label == 2 || report.label == 1">{{ledger.xactTypeCode == 'Dr' && ledger.foreignCurrencyAmount != 0 ? absoluuteValueForOpeningbalance(ledger.foreignCurrencyAmount): '-'}}</td>
+                <td style="max-width: 107px;" class="text-right" *ngIf="report.label == 3 || report.label == 1">{{ledger.xactTypeCode == 'Dr' && ledger.amount != 0 && ledger.amount != null   ? absoluuteValueForOpeningbalance(ledger.amount):'-'}}</td>
+                <td style="max-width: 107px;" class="text-right" *ngIf="report.label == 2 || report.label == 1">{{ledger.xactTypeCode == 'Cr' && ledger.foreignCurrencyAmount != 0 ? absoluuteValueForOpeningbalance(ledger.foreignCurrencyAmount): '-'}}</td>
+                <td style="max-width: 107px;" class="text-right" *ngIf="report.label == 3 || report.label == 1">{{ledger.xactTypeCode == 'Cr' && ledger.amount != 0 ?  absoluuteValueForOpeningbalance(ledger.amount):'-'}}</td>
+                <td class="text-right w-auto" *ngIf="report.label == 2 || report.label == 1">{{ledger.foreignBalance != 0 ? absoluuteValue(ledger.foreignBalance): '-'}}</td>
+                <td class="text-right w-auto" *ngIf="report.label == 3 || report.label == 1">{{ledger.balance != 0 ? absoluuteValue(ledger.balance) : '-'}}</td>
+    
+                <!-- <td>{{ledger.xactTypeCode }}</td> -->
+               
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <tr>
+                <td colspan="4"  [ngClass]="commonService.selectedLanguage == 'arUAE' ? 'text-left' : 'text-right'">{{'settings.pages.paymt_recipt_contra.total' | translate }}</td>
+                <td class="text-right" *ngIf="report.label == 2 || report.label == 1">{{foreignDebitTotal != 0 ?absoluuteValue(foreignDebitTotal):'-'}}</td>
+                <td class="text-right" *ngIf="report.label == 3 || report.label == 1">{{baseDebitTotal != 0 ?absoluuteValue(baseDebitTotal) : '-'}}</td>
+                <td class="text-right" *ngIf="report.label == 2 || report.label == 1">{{foreignCreditTotal != 0 ? absoluuteValue(foreignCreditTotal) : '-'}}</td>
+                <td class="text-right" *ngIf="report.label == 3 || report.label == 1">{{baseCreditTotal != 0 ? absoluuteValue(baseCreditTotal) : '-'}}</td>
+                <td class="text-right" *ngIf="report.label == 2 || report.label == 1">{{ledgerStatementData.closingBalanceFC != 0 && ledgerStatementData.closingBalanceFC != null ? absoluuteValue(ledgerStatementData.closingBalanceFC): '-'}}</td>
+                <td class="text-right" *ngIf="report.label == 3 || report.label == 1">{{ledgerStatementData.closingBalanceLC != 0 && ledgerStatementData.closingBalanceLC != null ? absoluuteValue(ledgerStatementData.closingBalanceLC): '-'}}</td>
+                <!-- <td>{{ledgerStatementData.closingTypeCode}}</td> -->
+
+                <!-- <td colspan="12" *ngIf="report.label == 3" class="text-right"> {{'settings.pages.account_ledger.ClosingBalance' | translate}} :  {{ledgerStatementData.closingBalanceLC}} ({{ledgerStatementData.closingTypeCode}})</td>
+                <td colspan="12" *ngIf="report.label == 1" class="text-right">{{'settings.pages.account_ledger.ClosingBalancefc' | translate}} :  {{ledgerStatementData.closingBalanceFC}} &nbsp; &nbsp; | &nbsp;&nbsp; {{'settings.pages.account_ledger.ClosingBalance' | translate}} :  {{ledgerStatementData.closingBalanceLC}}&nbsp;({{ledgerStatementData.closingTypeCode}}) </td>
+                <td colspan="12" *ngIf="report.label == 2" class="text-right"> {{'settings.pages.account_ledger.ClosingBalancefc' | translate}} :  {{ledgerStatementData.closingBalanceFC}}  ({{ledgerStatementData.closingTypeCode}})</td>   -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="7"> {{'settings.pages.view_journal.not_found'| translate}} </td>
+            </tr>
+        </ng-template>
+       
+    </p-table>
+
+   
+</div>
+<div class="col-12 flex justify-content-center" *ngIf="isSearched">
+    <button pButton type="button" label="Back"  pRipple icon="pi pi-arrow-left" (click)="isSearched = false;clearTotal()" ></button>
+</div>
+<div class="pageload" *ngIf="isSpinner">
+    <p-progressSpinner [style]="{width: '50px', height: '50px'}" strokeWidth="6"  animationDuration=".5s">
+    </p-progressSpinner>
+</div>
+<p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+<p-toast></p-toast>

@@ -1,0 +1,2888 @@
+{
+    "data": [
+    {
+      "accountGroupName": "Income",
+      "accountGroupCreditBal": "2840472.43",
+      "accountGroupDebitBal": "827189.96",
+      "depth": "00",
+      "leaf": "false",
+      "children": [
+        {
+          "accountGroupName": "Sales",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Tour Package Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Tour Package Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Umrah Package Fare",
+                      "id": "",
+                      "accountName": "Umrah Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Fare",
+                      "id": "",
+                      "accountName": "Tour Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Charges Fare",
+                      "id": "",
+                      "accountName": "Deportee Charges Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Service Charge",
+                      "id": "",
+                      "accountName": "Umrah Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Service Charges",
+                      "id": "",
+                      "accountName": "Tour Package Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Fare",
+                      "id": "",
+                      "accountName": "OTB Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Service Charges",
+                      "id": "",
+                      "accountName": "OTB Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Service Charges",
+                      "id": "",
+                      "accountName": "Deportee Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "1456",
+                      "id": "1123",
+                      "accountName": "Askari Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Service Charges",
+                      "id": "",
+                      "accountName": "Visa Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Package Commission",
+                      "id": "",
+                      "accountName": "Umrah Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Commission",
+                      "id": "",
+                      "accountName": "OTB Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Fare",
+                      "id": "",
+                      "accountName": "Visa Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Package Commission",
+                      "id": "",
+                      "accountName": "Visa Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Commission",
+                      "id": "",
+                      "accountName": "Tour Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Incentives",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Incentives - Airlines",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive Travel soft",
+                      "id": "",
+                      "accountName": "Incentive Travel soft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive SV",
+                      "id": "",
+                      "accountName": "Incentive SV",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Air SIal",
+                      "id": "",
+                      "accountName": "Incentive Air SIal",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelsoft",
+                      "id": "",
+                      "accountName": "Incentive Travelsoft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Umrah",
+                      "id": "",
+                      "accountName": "Incentive Umrah",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelline",
+                      "id": "",
+                      "accountName": "Incentive Travelline",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_PSA Commission (Saleem Intl)",
+                      "id": "",
+                      "accountName": "PSA Commission (Saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive FZ",
+                      "id": "",
+                      "accountName": "Incentive FZ",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive WY",
+                      "id": "",
+                      "accountName": "Incentive WY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EK",
+                      "id": "",
+                      "accountName": "Incentive EK",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive TSy",
+                      "id": "",
+                      "accountName": "Incentive TSy",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PA",
+                      "id": "",
+                      "accountName": "Incentive PA",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive GF",
+                      "id": "",
+                      "accountName": "Incentive GF",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive ER",
+                      "id": "",
+                      "accountName": "Incentive ER",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive QR",
+                      "id": "",
+                      "accountName": "Incentive QR",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive NL",
+                      "id": "",
+                      "accountName": "Incentive NL",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive KU",
+                      "id": "",
+                      "accountName": "Incentive KU",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive (saleem Intl)",
+                      "id": "",
+                      "accountName": "Incentive (saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PIA (IATA)",
+                      "id": "",
+                      "accountName": "Incentive PIA (IATA)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EY",
+                      "id": "",
+                      "accountName": "Incentive EY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive VS",
+                      "id": "",
+                      "accountName": "Incentive VS",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Incentive - GDS",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive - Hitit",
+                      "id": "",
+                      "accountName": "Incentive - Hitit",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Galileo",
+                      "id": "",
+                      "accountName": "Incentive - Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Abacus",
+                      "id": "",
+                      "accountName": "Incentive - Abacus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Amadeus",
+                      "id": "",
+                      "accountName": "Incentive - Amadeus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - DSL Galileo",
+                      "id": "",
+                      "accountName": "Incentive - DSL Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Ticket Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Ticket Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Ticket Refund Charges",
+                      "id": "",
+                      "accountName": "Ticket Refund Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Other Charges",
+                      "id": "",
+                      "accountName": "Ticket Other Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Airline Commission",
+                      "id": "",
+                      "accountName": "Airline Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "9834",
+                      "id": "1149",
+                      "accountName": "Elif Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Service Charge",
+                      "id": "",
+                      "accountName": "Ticket Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Tax",
+                      "id": "",
+                      "accountName": "Ticket Tax",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Fare",
+                      "id": "",
+                      "accountName": "Ticket Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Discount Income",
+                      "id": "",
+                      "accountName": "Inter Branch Discount Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Service Charges",
+                      "id": "",
+                      "accountName": "Inter Branch Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountGroupName": "Other Income",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Other Income",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Other Income",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Other Income",
+                      "id": "",
+                      "accountName": "Other Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Fine of Staff",
+                      "id": "",
+                      "accountName": "Fine of Staff",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Profit on Bank Accout",
+                      "id": "",
+                      "accountName": "Profit on Bank Accout",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Diff Of Fare",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountCode": "122333",
+          "id": "1154",
+          "accountName": "TITAN OM NAK Bank",
+          "currency": "INR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        },
+        {
+          "accountCode": "1111",
+          "id": "1111",
+          "accountName": "ashok test",
+          "currency": "PKR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        }
+      ]
+    },
+    {
+      "accountGroupName": "Assets",
+      "accountGroupCreditBal": "2840472.43",
+      "accountGroupDebitBal": "827189.96",
+      "depth": "00",
+      "leaf": "false",
+      "children": [
+        {
+          "accountGroupName": "Sales",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Tour Package Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Tour Package Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Umrah Package Fare",
+                      "id": "",
+                      "accountName": "Umrah Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Fare",
+                      "id": "",
+                      "accountName": "Tour Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Charges Fare",
+                      "id": "",
+                      "accountName": "Deportee Charges Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Service Charge",
+                      "id": "",
+                      "accountName": "Umrah Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Service Charges",
+                      "id": "",
+                      "accountName": "Tour Package Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Fare",
+                      "id": "",
+                      "accountName": "OTB Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Service Charges",
+                      "id": "",
+                      "accountName": "OTB Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Service Charges",
+                      "id": "",
+                      "accountName": "Deportee Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "1456",
+                      "id": "1123",
+                      "accountName": "Askari Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Service Charges",
+                      "id": "",
+                      "accountName": "Visa Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Package Commission",
+                      "id": "",
+                      "accountName": "Umrah Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Commission",
+                      "id": "",
+                      "accountName": "OTB Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Fare",
+                      "id": "",
+                      "accountName": "Visa Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Package Commission",
+                      "id": "",
+                      "accountName": "Visa Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Commission",
+                      "id": "",
+                      "accountName": "Tour Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Incentives",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Incentives - Airlines",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive Travel soft",
+                      "id": "",
+                      "accountName": "Incentive Travel soft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive SV",
+                      "id": "",
+                      "accountName": "Incentive SV",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Air SIal",
+                      "id": "",
+                      "accountName": "Incentive Air SIal",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelsoft",
+                      "id": "",
+                      "accountName": "Incentive Travelsoft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Umrah",
+                      "id": "",
+                      "accountName": "Incentive Umrah",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelline",
+                      "id": "",
+                      "accountName": "Incentive Travelline",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_PSA Commission (Saleem Intl)",
+                      "id": "",
+                      "accountName": "PSA Commission (Saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive FZ",
+                      "id": "",
+                      "accountName": "Incentive FZ",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive WY",
+                      "id": "",
+                      "accountName": "Incentive WY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EK",
+                      "id": "",
+                      "accountName": "Incentive EK",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive TSy",
+                      "id": "",
+                      "accountName": "Incentive TSy",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PA",
+                      "id": "",
+                      "accountName": "Incentive PA",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive GF",
+                      "id": "",
+                      "accountName": "Incentive GF",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive ER",
+                      "id": "",
+                      "accountName": "Incentive ER",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive QR",
+                      "id": "",
+                      "accountName": "Incentive QR",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive NL",
+                      "id": "",
+                      "accountName": "Incentive NL",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive KU",
+                      "id": "",
+                      "accountName": "Incentive KU",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive (saleem Intl)",
+                      "id": "",
+                      "accountName": "Incentive (saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PIA (IATA)",
+                      "id": "",
+                      "accountName": "Incentive PIA (IATA)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EY",
+                      "id": "",
+                      "accountName": "Incentive EY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive VS",
+                      "id": "",
+                      "accountName": "Incentive VS",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Incentive - GDS",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive - Hitit",
+                      "id": "",
+                      "accountName": "Incentive - Hitit",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Galileo",
+                      "id": "",
+                      "accountName": "Incentive - Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Abacus",
+                      "id": "",
+                      "accountName": "Incentive - Abacus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Amadeus",
+                      "id": "",
+                      "accountName": "Incentive - Amadeus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - DSL Galileo",
+                      "id": "",
+                      "accountName": "Incentive - DSL Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Ticket Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Ticket Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Ticket Refund Charges",
+                      "id": "",
+                      "accountName": "Ticket Refund Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Other Charges",
+                      "id": "",
+                      "accountName": "Ticket Other Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Airline Commission",
+                      "id": "",
+                      "accountName": "Airline Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "9834",
+                      "id": "1149",
+                      "accountName": "Elif Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Service Charge",
+                      "id": "",
+                      "accountName": "Ticket Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Tax",
+                      "id": "",
+                      "accountName": "Ticket Tax",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Fare",
+                      "id": "",
+                      "accountName": "Ticket Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Discount Income",
+                      "id": "",
+                      "accountName": "Inter Branch Discount Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Service Charges",
+                      "id": "",
+                      "accountName": "Inter Branch Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountGroupName": "Other Income",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Other Income",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Other Income",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Other Income",
+                      "id": "",
+                      "accountName": "Other Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Fine of Staff",
+                      "id": "",
+                      "accountName": "Fine of Staff",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Profit on Bank Accout",
+                      "id": "",
+                      "accountName": "Profit on Bank Accout",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Diff Of Fare",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountCode": "122333",
+          "id": "1154",
+          "accountName": "TITAN OM NAK Bank",
+          "currency": "INR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        },
+        {
+          "accountCode": "1111",
+          "id": "1111",
+          "accountName": "ashok test",
+          "currency": "PKR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        }
+      ]
+    },
+    {
+      "accountGroupName": "Equity",
+      "accountGroupCreditBal": "2840472.43",
+      "accountGroupDebitBal": "827189.96",
+      "depth": "00",
+      "leaf": "false",
+      "children": [
+        {
+          "accountGroupName": "Sales",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Tour Package Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Tour Package Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Umrah Package Fare",
+                      "id": "",
+                      "accountName": "Umrah Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Fare",
+                      "id": "",
+                      "accountName": "Tour Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Charges Fare",
+                      "id": "",
+                      "accountName": "Deportee Charges Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Service Charge",
+                      "id": "",
+                      "accountName": "Umrah Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Service Charges",
+                      "id": "",
+                      "accountName": "Tour Package Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Fare",
+                      "id": "",
+                      "accountName": "OTB Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Service Charges",
+                      "id": "",
+                      "accountName": "OTB Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Service Charges",
+                      "id": "",
+                      "accountName": "Deportee Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "1456",
+                      "id": "1123",
+                      "accountName": "Askari Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Service Charges",
+                      "id": "",
+                      "accountName": "Visa Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Package Commission",
+                      "id": "",
+                      "accountName": "Umrah Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Commission",
+                      "id": "",
+                      "accountName": "OTB Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Fare",
+                      "id": "",
+                      "accountName": "Visa Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Package Commission",
+                      "id": "",
+                      "accountName": "Visa Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Commission",
+                      "id": "",
+                      "accountName": "Tour Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Incentives",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Incentives - Airlines",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive Travel soft",
+                      "id": "",
+                      "accountName": "Incentive Travel soft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive SV",
+                      "id": "",
+                      "accountName": "Incentive SV",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Air SIal",
+                      "id": "",
+                      "accountName": "Incentive Air SIal",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelsoft",
+                      "id": "",
+                      "accountName": "Incentive Travelsoft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Umrah",
+                      "id": "",
+                      "accountName": "Incentive Umrah",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelline",
+                      "id": "",
+                      "accountName": "Incentive Travelline",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_PSA Commission (Saleem Intl)",
+                      "id": "",
+                      "accountName": "PSA Commission (Saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive FZ",
+                      "id": "",
+                      "accountName": "Incentive FZ",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive WY",
+                      "id": "",
+                      "accountName": "Incentive WY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EK",
+                      "id": "",
+                      "accountName": "Incentive EK",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive TSy",
+                      "id": "",
+                      "accountName": "Incentive TSy",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PA",
+                      "id": "",
+                      "accountName": "Incentive PA",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive GF",
+                      "id": "",
+                      "accountName": "Incentive GF",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive ER",
+                      "id": "",
+                      "accountName": "Incentive ER",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive QR",
+                      "id": "",
+                      "accountName": "Incentive QR",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive NL",
+                      "id": "",
+                      "accountName": "Incentive NL",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive KU",
+                      "id": "",
+                      "accountName": "Incentive KU",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive (saleem Intl)",
+                      "id": "",
+                      "accountName": "Incentive (saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PIA (IATA)",
+                      "id": "",
+                      "accountName": "Incentive PIA (IATA)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EY",
+                      "id": "",
+                      "accountName": "Incentive EY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive VS",
+                      "id": "",
+                      "accountName": "Incentive VS",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Incentive - GDS",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive - Hitit",
+                      "id": "",
+                      "accountName": "Incentive - Hitit",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Galileo",
+                      "id": "",
+                      "accountName": "Incentive - Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Abacus",
+                      "id": "",
+                      "accountName": "Incentive - Abacus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Amadeus",
+                      "id": "",
+                      "accountName": "Incentive - Amadeus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - DSL Galileo",
+                      "id": "",
+                      "accountName": "Incentive - DSL Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Ticket Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Ticket Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Ticket Refund Charges",
+                      "id": "",
+                      "accountName": "Ticket Refund Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Other Charges",
+                      "id": "",
+                      "accountName": "Ticket Other Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Airline Commission",
+                      "id": "",
+                      "accountName": "Airline Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "9834",
+                      "id": "1149",
+                      "accountName": "Elif Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Service Charge",
+                      "id": "",
+                      "accountName": "Ticket Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Tax",
+                      "id": "",
+                      "accountName": "Ticket Tax",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Fare",
+                      "id": "",
+                      "accountName": "Ticket Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Discount Income",
+                      "id": "",
+                      "accountName": "Inter Branch Discount Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Service Charges",
+                      "id": "",
+                      "accountName": "Inter Branch Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountGroupName": "Other Income",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Other Income",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Other Income",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Other Income",
+                      "id": "",
+                      "accountName": "Other Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Fine of Staff",
+                      "id": "",
+                      "accountName": "Fine of Staff",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Profit on Bank Accout",
+                      "id": "",
+                      "accountName": "Profit on Bank Accout",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Diff Of Fare",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountCode": "122333",
+          "id": "1154",
+          "accountName": "TITAN OM NAK Bank",
+          "currency": "INR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        },
+        {
+          "accountCode": "1111",
+          "id": "1111",
+          "accountName": "ashok test",
+          "currency": "PKR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        }
+      ]
+    },
+    {
+      "accountGroupName": "Expense",
+      "accountGroupCreditBal": "2840472.43",
+      "accountGroupDebitBal": "827189.96",
+      "depth": "00",
+      "leaf": "false",
+      "children": [
+        {
+          "accountGroupName": "Sales",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Tour Package Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Tour Package Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Umrah Package Fare",
+                      "id": "",
+                      "accountName": "Umrah Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Fare",
+                      "id": "",
+                      "accountName": "Tour Package Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Charges Fare",
+                      "id": "",
+                      "accountName": "Deportee Charges Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Service Charge",
+                      "id": "",
+                      "accountName": "Umrah Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Service Charges",
+                      "id": "",
+                      "accountName": "Tour Package Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Fare",
+                      "id": "",
+                      "accountName": "OTB Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Service Charges",
+                      "id": "",
+                      "accountName": "OTB Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Deportee Service Charges",
+                      "id": "",
+                      "accountName": "Deportee Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "1456",
+                      "id": "1123",
+                      "accountName": "Askari Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Service Charges",
+                      "id": "",
+                      "accountName": "Visa Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Umrah Package Commission",
+                      "id": "",
+                      "accountName": "Umrah Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_OTB Commission",
+                      "id": "",
+                      "accountName": "OTB Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Fare",
+                      "id": "",
+                      "accountName": "Visa Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Visa Package Commission",
+                      "id": "",
+                      "accountName": "Visa Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Tour Package Commission",
+                      "id": "",
+                      "accountName": "Tour Package Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Incentives",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Incentives - Airlines",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive Travel soft",
+                      "id": "",
+                      "accountName": "Incentive Travel soft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive SV",
+                      "id": "",
+                      "accountName": "Incentive SV",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Air SIal",
+                      "id": "",
+                      "accountName": "Incentive Air SIal",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelsoft",
+                      "id": "",
+                      "accountName": "Incentive Travelsoft",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Umrah",
+                      "id": "",
+                      "accountName": "Incentive Umrah",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive Travelline",
+                      "id": "",
+                      "accountName": "Incentive Travelline",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_PSA Commission (Saleem Intl)",
+                      "id": "",
+                      "accountName": "PSA Commission (Saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive FZ",
+                      "id": "",
+                      "accountName": "Incentive FZ",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive WY",
+                      "id": "",
+                      "accountName": "Incentive WY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EK",
+                      "id": "",
+                      "accountName": "Incentive EK",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive TSy",
+                      "id": "",
+                      "accountName": "Incentive TSy",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PA",
+                      "id": "",
+                      "accountName": "Incentive PA",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive GF",
+                      "id": "",
+                      "accountName": "Incentive GF",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive ER",
+                      "id": "",
+                      "accountName": "Incentive ER",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive QR",
+                      "id": "",
+                      "accountName": "Incentive QR",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive NL",
+                      "id": "",
+                      "accountName": "Incentive NL",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive KU",
+                      "id": "",
+                      "accountName": "Incentive KU",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive (saleem Intl)",
+                      "id": "",
+                      "accountName": "Incentive (saleem Intl)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive PIA (IATA)",
+                      "id": "",
+                      "accountName": "Incentive PIA (IATA)",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive EY",
+                      "id": "",
+                      "accountName": "Incentive EY",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive VS",
+                      "id": "",
+                      "accountName": "Incentive VS",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Incentive - GDS",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Incentive - Hitit",
+                      "id": "",
+                      "accountName": "Incentive - Hitit",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Galileo",
+                      "id": "",
+                      "accountName": "Incentive - Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Abacus",
+                      "id": "",
+                      "accountName": "Incentive - Abacus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - Amadeus",
+                      "id": "",
+                      "accountName": "Incentive - Amadeus",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Incentive - DSL Galileo",
+                      "id": "",
+                      "accountName": "Incentive - DSL Galileo",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "accountGroupName": "Ticket Sales",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Ticket Sales",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Ticket Refund Charges",
+                      "id": "",
+                      "accountName": "Ticket Refund Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Other Charges",
+                      "id": "",
+                      "accountName": "Ticket Other Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Airline Commission",
+                      "id": "",
+                      "accountName": "Airline Commission",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "9834",
+                      "id": "1149",
+                      "accountName": "Elif Bank",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Service Charge",
+                      "id": "",
+                      "accountName": "Ticket Service Charge",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Tax",
+                      "id": "",
+                      "accountName": "Ticket Tax",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Ticket Fare",
+                      "id": "",
+                      "accountName": "Ticket Fare",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Discount Income",
+                      "id": "",
+                      "accountName": "Inter Branch Discount Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Inter Branch Service Charges",
+                      "id": "",
+                      "accountName": "Inter Branch Service Charges",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountGroupName": "Other Income",
+          "accountGroupCreditBal": "2840472.43",
+          "accountGroupDebitBal": "827189.96",
+          "depth": "01",
+          "leaf": "false",
+          "children": [
+            {
+              "accountGroupName": "Other Income",
+              "accountGroupCreditBal": "2840472.43",
+              "accountGroupDebitBal": "827189.96",
+              "depth": "02",
+              "leaf": "false",
+              "children": [
+                {
+                  "accountGroupName": "Other Income",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": [
+                    {
+                      "accountCode": "CD_Other Income",
+                      "id": "",
+                      "accountName": "Other Income",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Fine of Staff",
+                      "id": "",
+                      "accountName": "Fine of Staff",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    },
+                    {
+                      "accountCode": "CD_Profit on Bank Accout",
+                      "id": "",
+                      "accountName": "Profit on Bank Accout",
+                      "currency": "PKR",
+                      "balanceFC": "0",
+                      "balanceLC": "1500",
+                      "xactTypeCode": "Dr",
+                      "depth": "04",
+                      "leaf": "true"
+                    }
+                  ]
+                },
+                {
+                  "accountGroupName": "Diff Of Fare",
+                  "accountGroupCreditBal": "2840472.43",
+                  "accountGroupDebitBal": "827189.96",
+                  "depth": "03",
+                  "leaf": "false",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "accountCode": "122333",
+          "id": "1154",
+          "accountName": "TITAN OM NAK Bank",
+          "currency": "INR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        },
+        {
+          "accountCode": "1111",
+          "id": "1111",
+          "accountName": "ashok test",
+          "currency": "PKR",
+          "balanceFC": "0",
+          "balanceLC": "1500",
+          "xactTypeCode": "Dr",
+          "depth": "01",
+          "leaf": "true"
+        }
+      ]
+    }
+  ]
+}

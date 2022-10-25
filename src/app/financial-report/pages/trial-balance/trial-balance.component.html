@@ -1,0 +1,248 @@
+<div class="row flex justify-content-center">
+    <h3 *ngIf="report.name != 'Periodic Trial Balance' || !isSearched">{{'settings.pages.financial_reports.TrialBalance' | translate}}</h3>
+    <h3 *ngIf="report.name == 'Periodic Trial Balance' && isSearched">{{'settings.pages.financial_reports.PeriodicTrialBalance' | translate}}</h3>
+
+    </div>
+    <div class="row" *ngIf="!isSearched">
+        <div class="flex align-items-baseline grid col-12">
+        <div class="field  col-12 md:col-3">
+                <label for="from" class="font-medium text-900 w-full">{{'settings.pages.financial_reports.BalanceasOn' | translate}} <span class="text-orange-500">*</span></label>
+                <p-calendar [showIcon]="true"  [maxDate]="currentDate" dateFormat="dd-M-yy" inputId="to"
+                placeholder="{{'settings.pages.view_journal.to_placeholder' | translate}}"  [(ngModel)]="balanceAsOnDate"
+                [style]="{'width': '100%'}" (onSelect)="setDate($event,'to')"></p-calendar>
+           
+        </div>
+        <div class="field  col-12 md:col-3">
+            <label for="to" class="font-medium text-900 w-full">
+                <span *ngIf="report != null && report.name == 'Periodic Trial Balance'">{{'settings.pages.financial_reports.From' | translate}}<span class="text-orange-500">*</span></span>
+                <span *ngIf="report.name != 'Periodic Trial Balance'">{{'settings.pages.financial_reports.FromOptional' | translate}}</span>
+            </label>
+            <p-calendar [showIcon]="true" [maxDate]="currentDate" inputId="from" dateFormat="dd-M-yy"
+            placeholder="{{'settings.pages.view_journal.from_placeholder' | translate}}" [(ngModel)]="fromDate" (onSelect)="setDate($event,'from')"
+            [style]="{'width': '100%'}"></p-calendar>
+           
+        </div>
+        <div class="field  col-12 md:col-3">
+            <label for="account" class="font-medium text-900 w-full">{{'settings.pages.financial_reports.Branch' | translate}}</label>
+
+            <p-dropdown   id="account" [filter]="true" filterBy="Name" [options]="branchList" [(ngModel)]="ledgerAccounts"
+                [style]="{'width':'100%','overflow':'visible'}" optionLabel="Name" placeholder="{{'settings.pages.day_book.place_holders.select_br' | translate}}" (onChange)="branchOnChange($event)" [(ngModel)]="selectedBranch">
+            </p-dropdown>
+
+        </div>
+        <div class="field  col-12 md:col-3">
+            <label for="report" class="font-medium text-900 w-full">{{'settings.pages.financial_reports.Type' | translate}}</label>
+
+                <p-dropdown   id="report" [filter]="true" filterBy="name" [options]="reportType"
+                    [style]="{'width':'100%','overflow':'visible'}" optionLabel="name" placeholder="{{'settings.pages.financial_reports.ChooseType' | translate}}" [(ngModel)]="report">
+                </p-dropdown>
+
+        </div>
+        
+        <div class="flex  align-items-baseline field col-12  md:col-3 " >
+           <span > <p-checkbox   [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox> &nbsp;&nbsp; <label   class="font-medium text-900 w-full">{{'settings.pages.financial_reports.HideBalances' | translate}}</label></span>
+           
+        </div> 
+       
+      
+       
+        <div class="flex  align-items-baseline field col-12  md:col-3 " >
+            <button class="w-10" pButton type="button" pButton id="view"  label="{{'settings.pages.financial_reports.view_balance' | translate}}" (click)="getTrialBalance()"></button>
+        </div>
+
+         </div>
+    </div>
+    <div *ngIf="isSearched && report.name == 'Periodic Trial Balance'" class="customised-treetable">
+
+    <div class="row flex grid col-12"  *ngIf="trialBalanceList.length > 0" >
+       <div class="col-12 md:col-2">
+        <label for="ason" class="font-medium text-900 w-full"><strong>{{'settings.pages.financial_reports.From' | translate}}</strong></label>
+        <input class="w-full border-none" readonly type="text" id="ason" pInputText [(ngModel)]="toDate"> 
+       </div>
+            <div class="col-12 md:col-2">
+                <label for="date" class="font-medium text-900 w-full"><strong>{{'settings.pages.financial_reports.TO' | translate}}</strong></label>
+                <input class="w-full border-none" readonly type="text" id="date" pInputText [(ngModel)]="balanceAsOnDate"> 
+        </div>
+        <!-- <div class="col-12 md:col-2">
+            <label for="date" class="font-medium text-900 w-full"><strong>{{'settings.pages.financial_reports.Date' | translate}}</strong></label>
+            <input class="w-full border-none" readonly type="text" id="date" pInputText [(ngModel)]="fromDate"> 
+    </div> -->
+        <div class="col-12 md:col-2">
+            <label for="level" class="font-medium text-900 w-full">{{'settings.pages.financial_reports.ChooseLevel' | translate}}</label>
+            <p-dropdown [showClear]="showClearOption"  id="level"  [options]="levelList"
+                    [style]="{'width':'100%','overflow':'visible'}" optionLabel="level" placeholder="{{'settings.pages.financial_reports.ChooseLevel' | translate}}" [(ngModel)]="initialLevel" (onChange)="chooseLevel()">
+                </p-dropdown>
+        </div>
+        <div class="col-12 md:col-4" style="margin-top: 23px;">
+            <label for="expandAll" class="font-medium text-900 w-full"></label>
+            <button id="expandAll" [disabled]="initialLevel == undefined || initialLevel.level == null" pButton type="button" label="{{'settings.pages.financial_reports.Expand' | translate}}" (click)="initialLevel == undefined || initialLevel.level == 'All'? expandAll() : expandBasedOnSelectedLevel() " style="margin-right: .5rem"></button>
+            <label for="collapseAll" class="font-medium text-900 w-full"></label>
+            <button id="collapseAll" [disabled]="initialLevel == undefined || initialLevel.level == null" pButton type="button" label="{{'settings.pages.financial_reports.Collapseall' | translate}}" (click)="collapseAll()"></button>
+            <label for="xsl" class="font-medium text-900 w-full"></label>
+            <button id="xsl" class="ml-2" pButton type="button" label="{{'xls'}}" icon="pi pi-download"  (click)="exportExcel()"></button>
+        </div>
+    </div>
+    <p-treeTable *ngIf="trialBalanceList.length > 0"  [value]="trialBalanceList" styleClass="p-datatable-gridlines p-datatable-striped " (onNodeExpand)="getSubGroups($event)" 
+       >
+        <ng-template pTemplate="header">
+            <tr>
+               
+                <th style="width: 400px;" [ngClass]="commonService.selectedLanguage == 'arUAE' ? 'text-right' : 'text-left'">{{'settings.pages.financial_reports.AccCode' | translate}} & {{'settings.pages.financial_reports.AccName' | translate}}</th>
+                <th style="width: 102px; padding-right: 20px;" class="text-right">{{'settings.pages.financial_reports.OpeningBalance' | translate}}</th>
+                <th style="width: 100px; padding-right: 20px;" class="text-right">{{'settings.pages.financial_reports.Debit' | translate}}</th>
+                <th style="width: 100px; padding-right: 20px;" class="text-right">{{'settings.pages.financial_reports.Credit' | translate}}</th>
+                <th style="width: 100px;" class="text-right">{{'settings.pages.financial_reports.ClosingBalance' | translate}}</th>
+    
+    
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+            <tr [ttRow]="rowNode" [ngClass]="rowNode.node.leaf == true? rowNode.node.styleClass :  rowNode.node.styleClass" *ngIf= "checked != true || rowNode.node.nonEmpty == 'true'">
+                
+                    <td [ngClass]="commonService.selectedLanguage == 'arUAE' ? 'text-right' : 'text-left'"> <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>                 
+                        <span *ngIf="rowNode.node.leaf == 'false'"><strong>{{rowNode.node.accountGroupName}}</strong></span>
+                        <span *ngIf="rowNode.node.leaf == 'true'"><strong>{{rowNode.node.accountCode +" - " + rowNode.node.accountName}}</strong></span>
+        
+                  </td>
+              
+                <td class="text-right">{{rowNode.node.openingBalance !== '0'? currencyFormatforBalance(rowNode.node.openingBalance): '-'}}</td>
+                
+                <td class="text-right">
+                    
+                    <span *ngIf="rowNode.node.leaf == 'false'">{{rowNode.node.accountGroupDebitBal !== '0'? currencyFormat(rowNode.node.accountGroupDebitBal):'-'}}</span>
+                    <span *ngIf="rowNode.node.leaf == 'true'">{{rowNode.node.xactTypeCode == 'Dr' ?currencyFormat(rowNode.node.balanceLC):'-'}}</span>
+                   
+                </td>
+                <td class="text-right">
+                    <span *ngIf="rowNode.node.leaf == 'false'">{{rowNode.node.accountGroupCreditBal !== '0'? currencyFormat(rowNode.node.accountGroupCreditBal):'-'}}</span>
+                    <span *ngIf="rowNode.node.leaf == 'true'">{{rowNode.node.xactTypeCode == 'Cr' ? currencyFormat(rowNode.node.balanceLC):'-'}}</span>
+                </td>
+                <td class="text-right">{{rowNode.node.closingBalance !== '0'? currencyFormatforBalance(rowNode.node.closingBalance): '-'}}</td>
+
+              
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer" let-columns>
+            <tr>
+               
+                <td></td>
+                <td class="text-right">
+                   <strong>{{'settings.pages.paymt_recipt_contra.total' | translate }}</strong> 
+                </td>
+                <td class="text-right">
+                    <strong>{{currencyFormat(trialData.debitTotal)}}</strong>
+                </td>
+                <td class="text-right">
+                    <strong>{{currencyFormat(trialData.creditTotal)}}</strong>
+                </td>
+                <td></td>
+            </tr>
+        </ng-template>
+    </p-treeTable>
+
+    <div class="justify-content-end flex grid col-12 p-4" *ngIf="isSearched">
+        <button pButton type="button" pButton id="search" pRipple icon="pi pi-times" label="{{'settings.pages.financial_reports.Back' | translate}}" (click)="isSearched = false"></button>
+    </div>
+</div>
+
+
+<div *ngIf="isSearched && report.name == 'Trial Balance'" class="customised-treetable">
+
+    <div class="row flex grid col-12"  *ngIf="trialBalanceList.length > 0" >
+       <div class="col-12 md:col-3">
+        <label for="ason" class="font-medium text-900 w-full"><strong>{{'settings.pages.financial_reports.BalanceasOn' | translate}}</strong></label>
+        <input class="w-full border-none" readonly type="text" id="ason" pInputText [(ngModel)]="balanceAsOnDate"> 
+           
+       </div>
+            <!-- <div class="col-12 md:col-3">
+                <label for="date" class="font-medium text-900 w-full"><strong>{{'settings.pages.financial_reports.Date' | translate}}</strong></label>
+                <input class="w-full border-none" readonly type="text" id="date" pInputText [(ngModel)]="fromDate"> 
+            
+        </div> -->
+        <div class="col-12 md:col-2">
+            <label for="level" class="font-medium text-900 w-full">{{'settings.pages.financial_reports.ChooseLevel' | translate}}</label>
+            <p-dropdown [showClear]="showClearOption"  id="level"  [options]="levelList"
+                    [style]="{'width':'100%','overflow':'visible'}" optionLabel="level" placeholder="{{'settings.pages.financial_reports.ChooseLevel' | translate}}" [(ngModel)]="initialLevel" (onChange)="chooseLevel()">
+                </p-dropdown>
+        </div>
+        <div class="col-12 md:col-4" style="margin-top: 23px;">
+            <label for="expandAll" class="font-medium text-900 w-full"></label>
+            <button id="expandAll" pButton type="button" [disabled]="initialLevel == undefined || initialLevel.level == null" label="{{'settings.pages.financial_reports.Expand' | translate}}" (click)="initialLevel == undefined || initialLevel.level == 'All'? expandAll() : expandBasedOnSelectedLevel() " style="margin-right: .5rem"></button>
+            <label for="collapseAll" class="font-medium text-900 w-full"></label>
+            <button id="collapseAll" [disabled]="initialLevel == undefined || initialLevel.level == null" pButton type="button" label="{{'settings.pages.financial_reports.Collapseall' | translate}}" (click)="collapseAll()"></button>
+            <label for="xsl" class="font-medium text-900 w-full"></label>
+            <button id="xsl" class="ml-2" pButton label="{{'xls'}}" type="button" icon="pi pi-download"  (click)="exportExcel()"></button>
+        </div>
+    </div>
+
+
+    <p-treeTable *ngIf="trialBalanceList.length > 0" [value]="trialBalanceList"  styleClass="p-datatable-gridlines p-datatable-striped" (onNodeExpand)="getSubGroups($event)">
+        <ng-template pTemplate="header">
+            <tr>
+             
+                <th style="width: 400px;" [ngClass]="commonService.selectedLanguage == 'arUAE' ? 'text-right' : 'text-left'">{{'settings.pages.financial_reports.AccCode' | translate}} & {{'settings.pages.financial_reports.AccName' | translate}}</th>
+                <th class="text-center" style="width: 80px;">{{'settings.pages.financial_reports.Currency' | translate}}</th>
+                <th class="text-right" style="width: 90px;">{{'settings.pages.financial_reports.FcBalance' | translate}}</th>
+                <th style="width: 100px; padding-right: 20px;"  class="text-right">{{'settings.pages.financial_reports.Debit' | translate}}</th>
+                <th style="width: 100px; padding-right: 20px;" class="text-right">{{'settings.pages.financial_reports.Credit' | translate}}</th>
+    
+    
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+            <tr  [ttRow]="rowNode" [ngClass]="rowNode.node.leaf == 'true'? rowNode.node.styleClass : rowNode.node.styleClass" *ngIf= "checked != true || rowNode.node.nonEmpty == 'true'">
+               
+    
+                    <td [ngClass]="commonService.selectedLanguage == 'arUAE' ? 'text-right' : 'text-left'"> <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>                 
+                        <span *ngIf="rowNode.node.leaf == 'false'"><strong>{{rowNode.node.accountGroupName}}</strong></span>
+                        <span *ngIf="rowNode.node.leaf == 'true'"><strong>{{rowNode.node.accountCode +" - " + rowNode.node.accountName}}</strong></span>
+        
+                  </td>
+              
+                <td class="text-center">{{rowNode.node.currency? rowNode.node.currency: '-'}}</td>
+                <td class="text-right">{{rowNode.node.balanceFC ? currencyFormat(rowNode.node.balanceFC):'-'}}</td>
+                <td class="text-right">
+                
+                    <span *ngIf="rowNode.node.leaf == 'false'">{{rowNode.node.accountGroupDebitBal !== '0'? currencyFormat(rowNode.node.accountGroupDebitBal):'-'}}</span>
+                    <span *ngIf="rowNode.node.leaf == 'true'">{{rowNode.node.xactTypeCode == 'Dr' ?currencyFormat(rowNode.node.balanceLC):'-'}}</span>
+                   
+                </td>
+                <td class="text-right">
+                    <span *ngIf="rowNode.node.leaf == 'false'">{{rowNode.node.accountGroupCreditBal !== '0'? currencyFormat(rowNode.node.accountGroupCreditBal):'-'}}</span>
+                    <span *ngIf="rowNode.node.leaf == 'true'">{{rowNode.node.xactTypeCode == 'Cr' ? currencyFormat(rowNode.node.balanceLC):'-'}}</span>
+                </td>
+              
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="footer" let-columns>
+            <tr>
+               
+                <td></td>
+                <td></td>
+                <td class="text-right">
+                   <strong>{{'settings.pages.paymt_recipt_contra.total' | translate }}</strong> 
+                </td>
+                <td class="text-right">
+                    <strong>{{currencyFormat(trialData.debitTotal)}}</strong>
+                </td>
+                <td class="text-right">
+                    <strong>{{currencyFormat(trialData.creditTotal)}}</strong>
+                </td>
+            </tr>
+        </ng-template>
+    </p-treeTable>
+    <div class="card" *ngIf="isSearched && trialBalanceList.length == 0">
+        <div>
+           <strong>{{'settings.pages.view_daybook.no_data' | translate}}</strong>
+        </div>
+    </div>
+    <div class="justify-content-end flex grid col-12 p-4" *ngIf="isSearched">
+        <button pButton type="button" pButton id="search" pRipple icon="pi pi-times" label="{{'settings.pages.financial_reports.Back' | translate}}" (click)="isSearched = false"></button>
+    </div>
+</div>
+
+<p-toast></p-toast>
+<div class="pageload" *ngIf="isSpinner">
+    <p-progressSpinner [style]="{width: '50px', height: '50px'}" strokeWidth="6"  animationDuration=".5s">
+    </p-progressSpinner>
+</div>

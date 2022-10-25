@@ -1,0 +1,15 @@
+{
+	"administration": {
+		"role": {
+			"list": {
+				"button": {
+					"add": "اضافه",
+					"delete": "حذف",
+					"new": "الجديد"
+				},
+				"description": "المكان الذي تدير فيه الأدوار",
+				"title": "دور"
+			}
+		}
+	}
+}

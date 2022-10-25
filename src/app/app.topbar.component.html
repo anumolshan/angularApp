@@ -1,0 +1,310 @@
+<div class="layout-topbar">
+
+    <!-- <a routerLink="/" *ngIf="appMain.isHorizontal() && !appMain.isMobile()" class="topbar-logo">
+        <img alt="logo" src="assets/layout/images/logomobile.png" />
+        <span class="app-name">SERENITY</span>
+    </a> -->
+
+    <!-- <img alt="logo" src="assets/layout/images/logomobile.png" class="mobile-logo"/> -->
+    <img *ngIf="commonService.showMenu" alt="logo" [src]="commonService?.profileDetails?.LogoSquare" class="mobile-logo"/>
+
+    <a href="#" class="menu-btn" (click)="appMain.onMenuButtonClick($event)">
+        <i class="pi pi-bars"></i>
+    </a>
+
+    <a href="#" class="topbar-menu-btn" (click)="appMain.onTopbarMobileMenuButtonClick($event)">
+        <i class="pi pi-user"></i>
+    </a>
+
+    <div class="layout-topbar-menu-wrapper" *ngIf="commonService.showMenu">
+        <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-active': appMain.topbarMenuActive}" (click)="appMain.onTopbarMenuClick($event)">
+            <li #profile class="profile-item profile-align pt-2" [ngClass]="{'active-topmenuitem': appMain.activeTopbarItem === profile}" (click)="appMain.onTopbarRootItemClick($event, profile)">
+                <a href="#">
+                    <!-- <span class="profile-image-wrapper">
+                        <img src="assets/layout/images/avatar.png"/>
+                    </span> -->
+                    
+                        <span class="profile-image-wrapper h-3rem app-drawer text-secondary ">
+                            <!-- <img src="assets/layout/images/avatar.png"/> -->
+                           <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-2rem"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg> -->
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-2rem ml-2 mt-1"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                            <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/>
+                           </svg>
+                        </span>
+                     
+                    <span class="topbar-item-name profile-name">{{commonService.userDetails?.attributes?.name}} {{commonService.userDetails?.attributes?.family_name}}</span>
+                </a>
+                <!-- <ul class="fadeInDown">
+                    <li role="menuitem"> -->
+                        <!-- <a href="#">
+                            <i class="pi pi-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-lock"></i>
+                            <span>Privacy</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li> -->
+                    <!-- <li role="menuitem">
+                        <a href="#" (click)="signOut()">
+                            <i class="pi pi-power-off"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul> -->
+            </li>
+            <li #app [ngClass]="{'active-topmenuitem':appMain.activeTopbarItem === app}" (click)="appMain.onTopbarRootItemClick($event, app)">
+                <a href="#" class="flex align-items-center">
+              
+                   <i>
+             <span class="h-3rem app-drawer text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-2rem"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg>
+            </span>
+                   </i>
+                    <span class="topbar-item-name mb-2 ml-3 ">{{'topbar.app_drawer.app_title'| translate}}</span>
+                </a>
+                <ul class="fadeInDown">
+                    <li role="menuitem">
+                        <!-- <a href="#">
+                            <i class="pi pi-palette"></i>
+                            <span>Change Theme</span>
+                        </a> -->
+                        <p-scrollPanel [style]="{width: '100%', height: 'auto'}">
+                            <div class="surface-card p-3">
+                                <div class="flex align-items-center justify-content-between mb-2">
+                                    <span class="text-xl font-medium text-900" style="margin-top: -15px;">{{'topbar.app_drawer.app_title'| translate}}</span>
+                                    <!-- <button pButton pRipple icon="pi pi-refresh" class="p-button-rounded p-button-outlined"></button> -->
+                                </div>
+                                <div class="grid" style="margin-bottom: -2.5rem">
+                                  
+    
+                                    <div class="col-6 sm:col-6 lg:col-6 xl:col-6 p-2"  *ngFor="let app of commonService.appList">
+                                        <div class="text-center">
+                                            <div class="cursor-pointer border-1 border-200 surface-50 flex align-items-center justify-content-center border-round  transition-colors transition-duration-100 bg-white-500 hover:bg-gray-300" style="width:100px; height:100px">
+                                               
+                                                <div (click)="redirectToApp(app.NavigationURL)" style="display: grid;">
+                                                    
+                                                        <i class="mt-2 m-auto text-primary">
+                                                            <span class="c-icons">
+                                                                 <svg-icon src="{{app.Icon}}" [stretch]="true"
+                                                                 [svgClass]="text-primary">
+                                                              </svg-icon>
+                                                            </span>
+                                                         
+                                                           </i>
+                                                           <span class="text-primary font-medium pt-2 mb-2" style="overflow-wrap: anywhere;">{{bindAppName(app.Name) | translate}}</span>
+                                                          
+                                                </div>
+    
+                                            </div>
+                                           
+                                           
+                                        </div>
+                                    </div>
+                       
+                                </div>
+                            </div>
+                        </p-scrollPanel>
+   
+                    </li>
+             
+                </ul>
+                
+            </li>
+            <li #settings [ngClass]="{'active-topmenuitem':appMain.activeTopbarItem === settings}" (click)="appMain.onTopbarRootItemClick($event, settings)">
+                <a href="#"class="flex align-items-center">
+                        <!-- <i class="pi pi-cog"></i> -->
+                        <i>
+                            <span class="h-3rem app-drawer text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-2rem" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg>
+                           </span>
+                        </i>
+                        <!-- <fa-icon [icon]="falanguage" class="topbar-icon"></fa-icon>   -->
+                    <span class="topbar-item-name ml-3 mb-2">{{'topbar.settings_label'| translate}}</span>
+                </a>
+                <ul class="fadeInDown">
+                    <!-- <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-palette"></i>
+                            <span>Change Theme</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-heart"></i>
+                            <span>Favorites</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-lock"></i>
+                            <span>Lock Screen</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-image"></i>
+                            <span>Wallpaper</span>
+                        </a>
+                    </li> -->
+                    <li role="menuitem">
+                        <a href="#">
+                            <i>
+                                <fa-icon [icon]="falanguage" class="topbar-icon"></fa-icon>  
+                            </i>
+                         
+                            <span> <strong>{{'topbar.language.language_label'| translate}}</strong></span>
+                        </a>
+                        <a (click)="changeLanguage('enUS')" class="cursor-pointer">
+                   
+                            <!-- <i class="pi pi-image"></i> -->
+                            <p-radioButton id="enID" name="groupname" value="enUS" [(ngModel)]="selectedLanguageValue"></p-radioButton>
+                            <label for="enID" class="cursor-pointer ml-2">{{'topbar.language.english' | translate}}</label>
+                            <!-- <p-radioButton name="groupname" value="enUS" [(ngModel)]="selectedLanguageValue"  label="{{'topbar.language.english' | translate}}" ></p-radioButton> -->
+               
+                        </a>
+                        <a  (click)="changeLanguage('arUAE')" class="cursor-pointer">
+                            <!-- <i class="pi pi-image"></i> -->
+                            <p-radioButton id="aeID" name="groupname" value="arUAE" [(ngModel)]="selectedLanguageValue"></p-radioButton>
+                            <label for="aeID" class="cursor-pointer ml-2">{{'topbar.language.arabic' | translate}}</label>
+                           <!-- <p-radioButton name="groupname" value="arUAE" [(ngModel)]="selectedLanguageValue"  label="{{'topbar.language.arabic' | translate}}" ></p-radioButton> -->
+                          
+                        </a>
+                        <a (click)="changeLanguage('mlIND')" class="cursor-pointer">
+                            <!-- <i class="pi pi-image"></i> -->
+                            <p-radioButton id="mlID" name="groupname" value="mlIND" [(ngModel)]="selectedLanguageValue"></p-radioButton>
+                            <label for="mlID" class="cursor-pointer ml-2">{{'topbar.language.malayalam' | translate}}</label>
+                          <!-- <p-radioButton name="groupname" value="mlIND" [(ngModel)]="selectedLanguageValue"  label="{{'topbar.language.malayalam' | translate}}" ></p-radioButton> -->
+                             
+                        </a>
+                      </li>
+
+                      <li role="menuitem">
+                        <a href="#">
+                            <!-- <i class="pi pi-dollar"></i> -->
+                            <i>
+                                <fa-icon [icon]="fadollar" class="topbar-icon"></fa-icon>  
+                            </i>
+                            <span> <strong>{{'topbar.currency.currency_label' | translate}}</strong></span>
+                        </a>
+                        <a href="#">
+                            <!-- <i class="pi pi-image"></i> -->
+                            <span> <p-radioButton name="groupname" value="INR" [(ngModel)]="selectedCurrencyValue"  label="INR" (onClick)="changeCurrency(selectedCurrencyValue)"></p-radioButton></span>
+                        </a>
+                        <a href="#">
+                            <!-- <i class="pi pi-image"></i> -->
+                            <span><p-radioButton name="groupname" value="USD" [(ngModel)]="selectedCurrencyValue"  label="USD" (onClick)="changeCurrency(selectedCurrencyValue)"></p-radioButton>
+                               </span>
+                        </a>
+                      </li>
+       
+                </ul>
+        
+            </li>
+            <!-- <li #messages [ngClass]="{'active-topmenuitem':appMain.activeTopbarItem === messages}" (click)="appMain.onTopbarRootItemClick($event, messages)">
+                <a href="#"> -->
+                    <!-- <i class="topbar-icon pi pi-envelope animated swing"></i> -->
+                    <!-- <i>
+                        <fa-icon [icon]="faEnvelope" class="topbar-icon animated swing"></fa-icon>     
+                       </i>
+                    <span class="topbar-badge animated rubberBand">5</span>
+                    <span class="topbar-item-name">Messages</span>
+                </a> -->
+                <!-- <ul class="fadeInDown"> -->
+                    <!-- <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <img src="assets/layout/images/avatar1.png" width="35"/>
+                            <span>Give me a call</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <img src="assets/layout/images/avatar2.png" width="35"/>
+                            <span>Sales reports attached</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <img src="assets/layout/images/avatar3.png" width="35"/>
+                            <span>About your invoice</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <img src="assets/layout/images/avatar2.png" width="35"/>
+                            <span>Meeting today at 10pm</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <img src="assets/layout/images/avatar4.png" width="35"/>
+                            <span>Out of office</span>
+                        </a>
+                    </li> -->
+                <!-- </ul> -->
+            <!-- </li>
+            <li #notifications [ngClass]="{'active-topmenuitem':appMain.activeTopbarItem === notifications}" (click)="appMain.onTopbarRootItemClick($event, notifications)">
+                <a href="#"> -->
+                    <!-- <i class="topbar-icon pi pi-bell"></i> -->
+                    <!-- <i>
+                        <fa-icon [icon]="faBell" class="topbar-icon"></fa-icon>     
+                       </i>
+                    <span class="topbar-badge animated rubberBand">4</span>
+                    <span class="topbar-item-name">Notifications</span> 
+                </a> -->
+                <!-- <ul class="fadeInDown"> -->
+                    <!-- <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-sliders-h"></i>
+                            <span>Pending tasks</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-calendar"></i>
+                            <span>Meeting today at 3pm</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-download"></i>
+                            <span>Download documents</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="pi pi-ticket"></i>
+                            <span>Book flight</span>
+                        </a>
+                    </li> -->
+                <!-- </ul> -->
+            <!-- </li> -->
+            <!-- <li class="search-item">
+                <span class="p-input-icon-right">
+                    <input type="search" pInputText placeholder="{{'topbar.search_label' | translate}}">
+                    <i class="topbar-icon pi pi-search"></i>
+                </span>
+            </li> -->
+
+            <div *ngIf="!appMain.isMobile()" class="text-lg font-bold text-secondry flex align-items-end" [ngClass]="isRTL === true && !appMain.isMobile() ? 'justify-content-start flex-row-reverse' : 'justify-content-start'">
+                <!-- <img alt="logo" class="w-2rem" src="assets/layout/images/logomobile.png"/> -->
+                <span class="c-icons">
+                    <svg-icon src="{{commonService?.appDetails?.Icon}}" [stretch]="true"  [ngClass]="appMain.isMobile() ? 'text-secondry' : 'text-white'">
+                 </svg-icon>
+               </span>
+                <!-- <img alt="logo"  class="w-2rem" [src]="commonService?.profileDetails[0]?.logoSquare"/> -->
+                <span class="ml-2 flex align-self-center" [ngClass]="appMain.isMobile() ? 'text-secondry' : 'text-white'">
+                    {{'topbar.ledger'|translate}} 
+                </span>
+            </div> 
+        </ul>
+    </div>
+</div>

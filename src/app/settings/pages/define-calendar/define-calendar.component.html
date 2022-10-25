@@ -1,0 +1,77 @@
+<div class="surface-card p-4 shadow-2 mb-3 surface-50 border-round">
+    <div class="text-3xl mt-1 font-medium text-900"> {{'settings.pages.define_calender.deffine_calender' | translate}}</div>
+</div>
+<div class="surface-card p-4 shadow-2 mb-3 surface-50 border-round">
+    <div class="surface-border border-round lg:p-4 sm:p-0">
+        <div class="grid">
+            <div class="col-4 lg:col-4 p-0">
+                
+                <div class="lg:col-10 p-0">
+                    <div>
+                        <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.define_calender.account_start_date' | translate}}</span>
+                        <p class="mb-2 text-600 font-medium text-sm">{{'settings.pages.define_calender.account_start_date_description' | translate}}</p>
+                        <div class="col-12 lg:col-10 p-0 mb-2">
+                            <p-calendar p-calendar-w-btn [(ngModel)]="startDate" dateFormat="dd/mm/yy" [showIcon]="true"
+                                [style]="{'width': '100%'}" placeholder ="{{'settings.pages.define_calender.coose_date' | translate}} "></p-calendar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 lg:col-4 p-0">
+                <div class="col-12 lg:col-10 p-0">
+                    <div>
+                        <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.define_calender.year_end_date' | translate}}</span>
+                        <p class="mt-1 mb-2 text-600 font-medium text-sm mr-8">{{'settings.pages.define_calender.year_end_date_description' | translate}}</p>
+                        <div class="col-12 lg:col-10 p-0 mb-2">
+                            <p-calendar [(ngModel)]="endDate" [showIcon]="true" inputId="icon"
+                                placeholder="{{'settings.pages.define_calender.choose_month' | translate}}" [style]="{'width': '100%'}"></p-calendar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 lg:col-4 p-0">
+                <div class="col-12 lg:col-10 p-0">
+                    <div>
+                        <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.define_calender.lockout_date' | translate}}</span>
+                        <p class="mt-1 mb-2 text-600 font-medium text-sm">{{'settings.pages.define_calender.lockout_date_description' | translate}}</p>
+                        <div class="col-12 lg:col-10 p-0 mb-2">
+                            <p-calendar [(ngModel)]="lockoutDate" [showIcon]="true" inputId="icon"
+                                placeholder="{{'settings.pages.define_calender.coose_date' | translate}}" [style]="{'width': '100%'}"></p-calendar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 lg:col-4 p-0 mt-4">
+                <div class="col-12 lg:col-10 p-0">
+                    <div>
+                        <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.define_calender.tax_year_end' | translate}}</span>
+                        <p class="mt-1 mb-2 text-600 font-medium text-sm">{{'settings.pages.define_calender.tax_year_end_description' | translate}}</p>
+                        <div class="col-12 lg:col-10 p-0 mb-2">
+                            <p-calendar [(ngModel)]="taxYearEndDate" [showIcon]="true" inputId="icon"
+                                placeholder="{{'settings.pages.define_calender.choose_month' | translate}}" [style]="{'width': '100%'}"></p-calendar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-4 lg:col-4 p-0">
+                <div class="col-12 lg:col-10 p-0">
+                    <div>
+                        <span class="text-900 text-xl font-medium mb-2">{{'settings.pages.define_calender.data_redundancy_policy' | translate}}</span>
+                        <p class="mt-1 mb-2 text-600 font-medium text-sm">{{'settings.pages.define_calender.data_redundancy_policy_description' | translate}}</p>
+                        <div class="col-12 lg:col-8 p-0 mb-2">
+                            
+                            <input type="text" pInputText placeholder=" " class="w-10 mt-2"/>
+                            <span class="ml-2 text-900">{{'settings.pages.define_calender.years' | translate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-12 flex justify-content-end">
+                <!-- <button pButton pRipple icon="pi pi-times" label="{{'settings.pages.define_calender.button_cancel' | translate}}"  class="p-button-warning mt-2 mr-2 lg:w-1 sm:w-auto min-w-max"  [routerLink]="['/settings']"></button>
+                <button pButton pRipple icon="pi pi-save" label="{{'settings.pages.define_calender.button_save' | translate}}" class="primary mt-2 mr-2 lg:w-1 sm:w-auto min-w-max"></button> -->
+                <button pButton pRipple icon="pi pi-times" label="{{'settings.pages.define_calender.button_cancel' | translate}}"  class="p-button-warning mr-2 mt-2 sm:w-auto min-w-max lg:w-1 "  [routerLink]="['/settings']"></button>
+                <button pButton pRipple icon="pi pi-save" label="{{'settings.pages.define_calender.button_save' | translate}}" class="primary mt-2 min-w-max sm:w-auto lg:w-1"></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+/* @media (max-width: 1024px) {
+
+	.profile-align {
+		float: none !important;
+		padding-left: 0px !important;
+	}
+
+}
+
+.profile-align {
+	float: right !important;
+	padding-left: 15px !important;
+	margin-right: 1em !important;
+}
+
+.profile-align>ul {
+	right: 90px !important;
+	left: auto !important;
+}
+
+.profile-align>ul:before {
+	margin-left: 218px;
+} */

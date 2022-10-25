@@ -1,0 +1,238 @@
+<div *ngIf="!showAddLeaf && !showAddSub">
+    <div class="surface-card p-4 shadow-2 mb-3 surface-50">
+        <div class="grid">
+            <div class="row col-12 sm:col-12 lg:col-6">
+                <div *ngIf="!selectedView" class="text-3xl mt-1 font-medium text-900">
+                    {{'settings.pages.chart_of_accounts.tree_view_title'| translate}}</div>
+                <div *ngIf="selectedView == true" class="text-3xl mt-1 font-medium text-900">
+                    {{'settings.pages.chart_of_accounts.table_view_title'| translate}}</div>
+                <div class="font-medium text-500 mb-3 ">
+                    {{'settings.pages.chart_of_accounts.chart_of_accounts_description'| translate}}</div>
+            </div>
+            <div class="row col-12 sm:col-12 lg:col-6 sm:flex justify-content-start lg:flex justify-content-end mt-3">
+                <div *ngIf="commonService.checkItemExist(commonService.accessList.ShowTabularView)">
+                    <p-toggleButton onLabel="{{'settings.pages.chart_of_accounts.toggle_tree_label'| translate}}"
+                        offLabel="{{'settings.pages.chart_of_accounts.toggle_table_label'| translate}}"onIcon="pi pi-sitemap" offIcon="pi pi-table" [(ngModel)]="selectedView"
+                        (click)="isTokenEmpty = false"></p-toggleButton>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <p-contextMenu #cm [model]="items" ></p-contextMenu>
+    <div *ngIf="!selectedView" class="grid">
+        <div class="col-12 md:col-12 lg:col-12">
+            <input type="text" class="w-12" id="searchWord" pInputText [(ngModel)]="searchText"
+                placeholder="Search here" (keyup)="searchHierarchy(searchText)">
+        </div>
+        <div class="mt-1">
+            <button pButton pRipple type="button" icon="pi pi-times"
+                class="p-button-rounded p-button-danger p-button-text absolute -ml-7 mt-2" *ngIf="searchText"
+                (click)="clearSearch('tree')"></button>
+
+        </div>
+    </div>
+
+    <p-tree *ngIf="!selectedView == true" [value]="hierarchyList" [filter]="false" scrollHeight="400px"
+        [draggableNodes]="IsDragable" [droppableNodes]="true" draggableScope="self" droppableScope="self"
+        selectionMode="single" [(selection)]="selectedFile" [contextMenu]="cm"
+        (onNodeDrop)="updateDropedAccount($event)" (onNodeSelect)="onLeafSelect($event)"
+        (onNodeExpand)="nodeExpand($event)" [loading]="false" (contextmenu)="onLeafSelect($event)">
+        <ng-template let-node pTemplate="url">
+            <a [href]="node.data">{{node.label}}</a>
+        </ng-template>
+        <ng-template let-node pTemplate="default">
+
+            <div *ngIf="!node.leaf">{{node.label}}</div>
+
+            <div class="grid mt-0 " *ngIf="node.leaf && setAccountName(node.label)"
+                [ngStyle]="{'color': checkIsActive(node.label) ? 'green' : 'red' }">
+
+                <div class="col-12 md:col-12 lg:col-8 w-30rem">{{accountName.code}}  {{accountName.name}}</div>
+                <div class="hidden sm:inline-flex col-12 md:col-12 lg:col-2 w-4rem ml-7">{{accountName.currency}}</div>
+                <div class="hidden sm:inline-flex col-12 md:col-12 lg:col-2 w-4rem ml-7">{{accountName.status}} </div>
+            </div>
+
+        </ng-template>
+    </p-tree>
+    <div *ngIf="selectedView == true" class="grid">
+        <div class="col-12 md:col-12 lg:col-12">
+            <input type="text" class="w-12" id="searchWord" pInputText [(ngModel)]="searchText"
+                placeholder="Search here" (keyup)="searchRecords(searchText)">
+        </div>
+        <div class="mt-1">
+            <button pButton pRipple type="button" icon="pi pi-times"
+                class="p-button-rounded p-button-danger p-button-text absolute -ml-7 mt-2" *ngIf="searchText"
+                (click)="clearSearch('table')"></button>
+        </div>
+    </div>
+    <div *ngIf="selectedView == true" class="card">
+        <p-table [columns]="" [value]="accountList" [scrollable]="true" [rows]="10" scrollHeight="300px" #dt1
+            [virtualScroll]="true" [virtualRowHeight]="10" [lazy]="true" (onLazyLoad)="getListRecords($event)">
+            <ng-template pTemplate="header">
+
+                <tr>
+                    <th>{{'settings.pages.chart_of_accounts.table_title_code'| translate}}</th>
+                    <th>{{'settings.pages.chart_of_accounts.table_title_name'| translate}}</th>
+                    <th>{{'settings.pages.chart_of_accounts.table_title_description'| translate}}</th>
+                    <th>{{'settings.pages.chart_of_accounts.table_title_parent'| translate}}</th>
+                    <th>{{'settings.pages.chart_of_accounts.table_title_currency'| translate}}</th>
+                    <th>{{'settings.pages.chart_of_accounts.table_title_status'| translate}}</th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td [ngStyle]="{'max-width.px': widthExp}">{{product.Code}}</td>
+                    <td [ngStyle]="{'max-width.px': widthExp}">{{product.Name}}</td>
+                    <td [ngStyle]="{'max-width.px': widthExp}">{{product.Description}}</td>
+                    <td [ngStyle]="{'max-width.px': widthExp}">{{product.Parent}}</td>
+                    <td [ngStyle]="{'min-width.px': widthExp}">{{product.Currency}}</td>
+                    <td [ngStyle]="{'min-width.px': widthExp}">
+                        <span
+                            [ngClass]="product.Status == true ? 'bg-green-800 text-300 text-center' : 'text-center bg-pink-800 text-300'"
+                            style="min-width: 60px;">{{product.Status == true?'Active':'Inactive'}}</span>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage" colspan="5">
+                <tr>
+                    <td>{{'settings.pages.chart_of_accounts.table_view_no_record'| translate}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+    </div>
+
+</div>
+
+
+<!--Account Section-->
+<div *ngIf="showAddLeaf">
+
+    <div class="surface-card p-4 shadow-2 mb-3 surface-50">
+        <div class="text-3xl mt-1 font-medium text-900" *ngIf="!isEditLeafEnable">
+            {{'settings.pages.add_nominal.add_nominal_account' | translate}}</div>
+        <div class="text-3xl mt-1 font-medium text-900" *ngIf="isEditLeafEnable">
+            {{'settings.pages.add_nominal.edit_nominal_account' | translate}}</div>
+    </div>
+    <div class="grid formgrid p-fluid surface-card p-4 shadow-2 border-round mb-3">
+
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="code_id" class="font-medium text-900">{{'settings.pages.add_nominal.code_label' | translate}}
+            </label>
+            <input id="code_id" type="text" pInputText
+                placeholder="{{'settings.pages.add_nominal.Enter_Code' | translate}}" [(ngModel)]="leafCode">
+        </div>
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="account_name" class="font-medium text-900">{{'settings.pages.add_nominal.name_label' |
+                translate}} </label>
+            <input id="account_name" type="text" pInputText
+                placeholder="{{'settings.pages.add_nominal.Enter_Name' | translate}}" [(ngModel)]="leafName">
+        </div>
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="currency" class="font-medium text-900">{{'settings.pages.add_nominal.currency_label' |
+                translate}} </label>
+            <p-dropdown inputId="currency" [options]="currency" optionLabel="name" [showClear]="true"
+                placeholder="{{'settings.pages.add_nominal.Choose_Currency' | translate}}" [(ngModel)]="leafCurrency"
+                optionValue="code">
+                <ng-template let-country pTemplate="item">
+                    <div class="flex align-items-center">
+                        <div>{{country.name}}</div>
+                    </div>
+                </ng-template>
+            </p-dropdown>
+        </div>
+
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="account_description" class="font-medium text-900">{{'settings.pages.add_nominal.description' |
+                translate}}</label>
+            <textarea id="account_description" type="text" pInputTextarea rows="1"
+                placeholder="{{'settings.pages.add_nominal.Enter_Description' | translate}}"
+                [(ngModel)]="leafDescription"></textarea>
+        </div>
+
+
+
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="account_status" class="font-medium text-900">{{'settings.pages.add_nominal.stattus' |
+                translate}} </label>
+            <div class="flex align-items-center mt-3">
+                <p-inputSwitch inputId="account_status" [(ngModel)]="leafStatus"></p-inputSwitch>
+                <span class="ml-2 text-900">{{'settings.pages.add_nominal.toggle_label'| translate}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="surface-border border-top-1 opacity-50 mb-4 col-12"></div>
+    <div class="field mb-4 col-12 md:col-12 flex justify-content-end">
+        <button pButton type="button" icon="pi pi-times"
+            label="{{'settings.pages.add_nominal.button_cancel'| translate}}"
+            class="p-button-warning mt-2 mr-2 lg:w-1 sm:w-auto min-w-max" (click)="clearData();showAddLeaf = false"></button>
+        <button *ngIf="!isEditLeafEnable" pButton type="button" icon="pi pi-save"
+            label="{{'settings.pages.add_nominal.button_save'| translate}}"
+            class="primary mt-2 mr-2 lg:w-1 sm:w-auto min-w-max" (click)="createLeaf('Leaf')"
+            (window:keyup.enter)="createLeaf('Leaf')"></button>
+        <button *ngIf="isEditLeafEnable" pButton type="button" icon="pi pi-save"
+            label="{{'settings.pages.add_nominal.button_update'| translate}}"
+            class="primary mt-2 mr-2 lg:w-1 sm:w-auto min-w-max" (click)="updateLeaf('Leaf')"
+            (window:keyup.enter)="updateLeaf('Leaf')"></button>
+
+    </div>
+
+</div>
+<!--End Account Section-->
+
+
+<!--Group Section-->
+<div *ngIf="showAddSub">
+
+
+    <div class="surface-card p-4 shadow-2 mb-3 surface-50">
+        <div class="text-3xl mt-1 font-medium text-900" *ngIf="!isEditBranchEnable">
+            {{'settings.pages.add_sub_group.add_sub_group_label' | translate}}</div>
+        <div class="text-3xl mt-1 font-medium text-900" *ngIf="isEditBranchEnable">
+            {{'settings.pages.add_sub_group.edit_sub_group_label' | translate}}</div>
+    </div>
+
+    <div class="grid formgrid p-fluid surface-card p-4 shadow-2 mb-3 surface-50">
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="group_name" class="font-medium text-900">{{'settings.pages.add_sub_group.name' |
+                translate}}</label>
+            <input id="group_name" type="text" pInputText [disabled]="isEditBranchEnable"
+                placeholder="{{'settings.pages.add_nominal.Enter_Name' | translate}}" [(ngModel)]="branchName">
+        </div>
+        <div class="field mb-4 col-12 md:col-6">
+            <label for="invoice_id" class="font-medium text-900">{{'settings.pages.add_sub_group.description' |
+                translate}}</label>
+            <textarea id="bio" type="text" pInputTextarea rows="1" [(ngModel)]="branchDescription"
+                placeholder="{{'settings.pages.add_nominal.Enter_Description' | translate}}"></textarea>
+        </div>
+
+    </div>
+    <div class="surface-border border-top-1 opacity-50 mb-4 col-12"></div>
+    <div class="field mb-4 col-12 md:col-12 flex justify-content-end">
+        <button pButton type="button" icon="pi pi-times"
+            label="{{'settings.pages.add_sub_group.button_cancel'| translate}}" (click)="clearData();showAddSub = false"
+            class="p-button-warning mt-2 mr-2 lg:w-1 sm:w-auto min-w-max"></button>
+        <button *ngIf="!isEditBranchEnable" pButton type="button" icon="pi pi-save" (click)="createHierarchy('Branch')"
+            (window:keyup.enter)="createHierarchy('Branch')"
+            label="{{'settings.pages.add_sub_group.button_save'| translate}}"
+            class="primary mt-2 mr-2 lg:w-1 sm:w-auto min-w-max"></button>
+        <button *ngIf="isEditBranchEnable" pButton type="button" icon="pi pi-save" (click)="upadateBranch()"
+            (window:keyup.enter)="upadateBranch()" label="{{'settings.pages.add_sub_group.button_update'| translate}}"
+            class="primary mt-2 mr-2 lg:w-1 sm:w-auto min-w-max"></button>
+
+    </div>
+</div>
+<!--End Group Section-->
+
+<p-toast></p-toast>
+<p-confirmDialog [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    Content
+</p-confirmDialog>
+<div class="pageload" *ngIf="loading">
+    <p-progressSpinner [style]="{width: '50px', height: '50px'}" strokeWidth="6" animationDuration=".5s">
+    </p-progressSpinner>
+</div>

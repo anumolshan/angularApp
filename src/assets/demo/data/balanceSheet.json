@@ -1,0 +1,700 @@
+{
+    "data": [
+        {
+            "key": "ACCGRP_291ErUwQJSEfVrxnGAPZGH68cqK#007-honeycomb-ledger-chartofaccounts#01",
+            "label": "Assets",
+            "data": "7700222 ",
+            "leaf": false,
+            "collapsedIcon": "pi pi-folder",
+            "expandedIcon": "pi pi-folder-open",
+            "icon": "pi pi-sitemap",
+            "children":[
+                {
+                    "key": "ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#ACCGRP_291ErUwQJSEfVrxnGAPZGH68cqK#01",
+                    "label": "Current Assets",
+                    "data": "",
+                    "leaf": false,
+                    "collapsedIcon": "pi pi-folder",
+                    "expandedIcon": "pi pi-folder-open",
+                    "icon": "pi pi-sitemap",
+                    "children": [
+                        {
+                            "key": "ACCGRP_291ErPxLi5UXkTwIGAOUSb5gyuL#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "Cash Or Bank Equivalents",
+                            "data": "85995",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": [
+                                {
+                                    "key": "ACCGRP_291ErSaw4T2aZRQQtxVm8DSe3nR#ACCGRP_291ErPxLi5UXkTwIGAOUSb5gyuL#03",
+                                    "label": "Banks",
+                                    "data": "588550",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": 
+                                    [
+                                        {
+                                          "accountCode": "101",
+                                          "id": 86,
+                                          "accountName": "acc-depriciation vehicle",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 14536664,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "222",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric equipments",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 235602,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "111",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric aa",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 2356.02,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "100",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric bb",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 235602,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "501",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric cc",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 235602,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        }
+                                      ]
+                                },
+                                {
+                                    "key": "ACCGRP_291ErUk3hllqYLsDiz4jJAilCR0#ACCGRP_291ErPxLi5UXkTwIGAOUSb5gyuL#03",
+                                    "label": "Cash",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": 
+                                    [
+                                        {
+                                          "accountCode": "200",
+                                          "id": 86,
+                                          "accountName": "acc-depriciation vehicle",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 1453664,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "500",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric equipments",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 235802,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "255",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric aa",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 2356.02,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "774",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric bb",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 235602,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        },
+                                        {
+                                          "accountCode": "558",
+                                          "id": 87,
+                                          "accountName": "acc-depriciation electric cc",
+                                          "currency": "PKR",
+                                          "balanceFC": 0,
+                                          "balanceLC": 235602,
+                                          "xactTypeCode": "Cr",
+                                          "leaf": true
+                                        }
+                                      ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ACCGRP_291ErUxnbL0bz7kL9nuuHPRss3m#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "Tax Receivables",
+                            "data": "",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": [
+                                {
+                                    "key": "ACCGRP_291ErSsfum2vfXagVpc2ALM5SUw#ACCGRP_291ErUxnbL0bz7kL9nuuHPRss3m#03",
+                                    "label": "WHT Receivable",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "Long Term Deposits and Guarantees",
+                            "data": "",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": [
+                                {
+                                    "key": "ACCGRP_291ErUK6tjDAM1jzu4gztskCOdk#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Locker Security (ASBL)",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErVteG8vEwQZgw2LkDqJUH2k#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Tourism C Aviation Askari CG",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErQgKkymRPFwOpq96fpwdnMb#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Guarantees (Askari Bank)",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErVODCt3ySaV84CxcKnWmskK#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Office Security (NCT)",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErUoNYw6qnjaJno2pShKchzA#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Desposits & Guarantees",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErVojPjwZqLHBuOiwhoUGaY1#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Cant house Security",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErRfqSJ2Cs1frNofoHiCoUw6#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Fire Extinguishers",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErOs9C0kIPUFuml1lx0EK4EP#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Water supply office Security",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErObYduhyeU8a4xWM713PqKF#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Office Security (SIAT-LHE)",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErQPlcJGzZL1PVJfbNy8iybs#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Office Security NCT-SKT",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErV9rKKNUzywdUDsXh2OIgs1#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "PIA PSA (SIAT CG+ askari BG)",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErQD0eeLNW9C5CT7eUIoQcqq#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Garisson Mess Cantt Security",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErQdEm3h7YWOr8XJFnyBlCHy#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Family Travel & Tours (RWP) Guarantee",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErUFByhbULhmi1s4GGHW6kvl#ACCGRP_291ErUUyE91Rw5R61VHfkgOeFY7#03",
+                                    "label": "Shaheen Air International (CG+Askari BG)",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ACCGRP_291ErVIalvte1dnQSD3jaLdjZ0D#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "Advances, Deposits and Pre Payments",
+                            "data": "",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": [
+                                {
+                                    "key": "ACCGRP_291ErP8I843vhm8g3sHV7TU93pw#ACCGRP_291ErVIalvte1dnQSD3jaLdjZ0D#03",
+                                    "label": "Staff Loans & Advances",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErTGHaBibjmNUv68btoZpXrz#ACCGRP_291ErVIalvte1dnQSD3jaLdjZ0D#03",
+                                    "label": "Advance Salaries",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ACCGRP_2AbOI3HFX88G4kHshQZwnT5KXEv#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "test",
+                            "data": "100000",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": []
+                        },
+                        {
+                            "key": "ACCGRP_291ErUSLzMg5dgcgn1xvkaxiEUu#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "Trade Accounts Receivable",
+                            "data": "",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": [
+                                {
+                                    "key": "ACCGRP_291ErRsz1KuiAjhdvurzsHa1w0o#ACCGRP_291ErUSLzMg5dgcgn1xvkaxiEUu#03",
+                                    "label": "Refund Receivable",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErRGzpYdH7asLyCSb9h3uKjL#ACCGRP_291ErUSLzMg5dgcgn1xvkaxiEUu#03",
+                                    "label": "Debtors Control",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ACCGRP_291ErStBWkZbXTylIc93rhm7jXw#ACCGRP_291ErTHlCPQ7LSaMg5STfu42BCL#02",
+                            "label": "Others",
+                            "data": "",
+                            "leaf": false,
+                            "collapsedIcon": "pi pi-folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "icon": "pi pi-sitemap",
+                            "children": [
+                                {
+                                    "key": "ACCGRP_291ErQVbQrZDF4nKIAtBxfEYfC4#ACCGRP_291ErStBWkZbXTylIc93rhm7jXw#03",
+                                    "label": "Other Receivables",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                },
+                                {
+                                    "key": "ACCGRP_291ErRQjeZfRReteAor9FpF0yQs#ACCGRP_291ErStBWkZbXTylIc93rhm7jXw#03",
+                                    "label": "Division Control",
+                                    "data": "",
+                                    "leaf": false,
+                                    "collapsedIcon": "pi pi-folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "icon": "pi pi-sitemap",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+            
+        },
+   
+    
+    {
+        "key": "ACCGRP_291ErTkOKdNUlCC6r60z9ban0Er#007-honeycomb-ledger-chartofaccounts#01",
+        "label": "Liabilities",
+        "data": "28806222",
+        "leaf": false,
+        "collapsedIcon": "pi pi-folder",
+        "expandedIcon": "pi pi-folder-open",
+        "icon": "pi pi-sitemap",
+        "children": [
+            {
+                "key": "ACCGRP_291ErRbKZLfuzikVRybqP5BWFTh#ACCGRP_291ErTkOKdNUlCC6r60z9ban0Er#01",
+                "label": "Current Liabilities",
+                "data": "",
+                "leaf": false,
+                "collapsedIcon": "pi pi-folder",
+                "expandedIcon": "pi pi-folder-open",
+                "icon": "pi pi-sitemap",
+                "children": [
+                    {
+                        "key": "ACCGRP_291ErQyGUw8WNZ9V6g9l5TfBQs7#ACCGRP_291ErRbKZLfuzikVRybqP5BWFTh#02",
+                        "label": "Accrued Expenses",
+                        "data": "",
+                        "leaf": false,
+                        "collapsedIcon": "pi pi-folder",
+                        "expandedIcon": "pi pi-folder-open",
+                        "icon": "pi pi-sitemap",
+                        "children": [
+                            {
+                                "key": "ACCGRP_291ErV5hef5mm6riWqG9Z4r2J7h#ACCGRP_291ErQyGUw8WNZ9V6g9l5TfBQs7#03",
+                                "label": "Salaries Payable",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            },
+                            {
+                                "key": "ACCGRP_291ErPGFIZysa05LWK8HR7LktSj#ACCGRP_291ErQyGUw8WNZ9V6g9l5TfBQs7#03",
+                                "label": "Staff Commission Payable",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            },
+                            {
+                                "key": "ACCGRP_291ErSdQUgGzOzogTK44yn9pTxU#ACCGRP_291ErQyGUw8WNZ9V6g9l5TfBQs7#03",
+                                "label": "WHT Tax Payable",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            },
+                            {
+                                "key": "ACCGRP_291ErVqWtPBmfQoTwA3rwOJ1xFn#ACCGRP_291ErQyGUw8WNZ9V6g9l5TfBQs7#03",
+                                "label": "Accrued Expenses",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "key": "ACCGRP_291ErUjrG7rkAbSEl3OMoTP2dVl#ACCGRP_291ErRbKZLfuzikVRybqP5BWFTh#02",
+                        "label": "Other Payables",
+                        "data": "",
+                        "leaf": false,
+                        "collapsedIcon": "pi pi-folder",
+                        "expandedIcon": "pi pi-folder-open",
+                        "icon": "pi pi-sitemap",
+                        "children": [
+                            {
+                                "key": "ACCGRP_291ErTFLILf2GBPFjLiRcriin1U#ACCGRP_291ErUjrG7rkAbSEl3OMoTP2dVl#03",
+                                "label": "Pending Tickets (Dupe/Wrong)",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            },
+                            {
+                                "key": "ACCGRP_291ErQkb7CE12w0WCzAwBOzxvWU#ACCGRP_291ErUjrG7rkAbSEl3OMoTP2dVl#03",
+                                "label": "Other Payables",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "key": "ACCGRP_291ErPRGQWBziAFzyoovI3RgJ1b#ACCGRP_291ErRbKZLfuzikVRybqP5BWFTh#02",
+                        "label": "Trade Accounts Payable",
+                        "data": "",
+                        "leaf": false,
+                        "collapsedIcon": "pi pi-folder",
+                        "expandedIcon": "pi pi-folder-open",
+                        "icon": "pi pi-sitemap",
+                        "children": [
+                            {
+                                "key": "ACCGRP_291ErS1yExy8HCZMB1hA5ASPf2F#ACCGRP_291ErPRGQWBziAFzyoovI3RgJ1b#03",
+                                "label": "Creditors Control",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            },
+                            {
+                                "key": "ACCGRP_291ErR0pkTDVNnUue1vtkQZsOXr#ACCGRP_291ErPRGQWBziAFzyoovI3RgJ1b#03",
+                                "label": "Refund Payables",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            },
+                            {
+                                "key": "ACCGRP_291ErVje8vaQlDL6mxSLfUl4MUP#ACCGRP_291ErPRGQWBziAFzyoovI3RgJ1b#03",
+                                "label": "UnClaimed Deposits",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": 
+                                [
+                                    {
+                                      "accountCode": "777",
+                                      "id": 86,
+                                      "accountName": "acc-depriciation vehicle",
+                                      "currency": "PKR",
+                                      "balanceFC": 0,
+                                      "balanceLC": 14536664,
+                                      "xactTypeCode": "Cr",
+                                      "leaf": true
+                                    },
+                                    {
+                                      "accountCode": "555",
+                                      "id": 87,
+                                      "accountName": "acc-depriciation electric equipments",
+                                      "currency": "PKR",
+                                      "balanceFC": 0,
+                                      "balanceLC": 235602,
+                                      "xactTypeCode": "Cr",
+                                      "leaf": true
+                                    },
+                                    {
+                                      "accountCode": "444",
+                                      "id": 87,
+                                      "accountName": "acc-depriciation electric aa",
+                                      "currency": "PKR",
+                                      "balanceFC": 0,
+                                      "balanceLC": 235602,
+                                      "xactTypeCode": "Cr",
+                                      "leaf": true
+                                    },
+                                    {
+                                      "accountCode": "555",
+                                      "id": 87,
+                                      "accountName": "acc-depriciation electric bb",
+                                      "currency": "PKR",
+                                      "balanceFC": 0,
+                                      "balanceLC": 235602,
+                                      "xactTypeCode": "Cr",
+                                      "leaf": true
+                                    },
+                                    {
+                                      "accountCode": "552",
+                                      "id": 87,
+                                      "accountName": "acc-depriciation electric cc",
+                                      "currency": "PKR",
+                                      "balanceFC": 0,
+                                      "balanceLC": 235602,
+                                      "xactTypeCode": "Cr",
+                                      "leaf": true
+                                    }
+                                  ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "key": "ACCGRP_291ErUS7Gr3NmDKOdDEAq5KJa6i#007-honeycomb-ledger-chartofaccounts#01",
+        "label": "Equity",
+        "data": "399822",
+        "leaf": false,
+        "collapsedIcon": "pi pi-folder",
+        "expandedIcon": "pi pi-folder-open",
+        "icon": "pi pi-sitemap",
+        "children": [
+            {
+                "key": "ACCGRP_291ErRg6K7X4LYWCqzNUz72K7Ik#ACCGRP_291ErUS7Gr3NmDKOdDEAq5KJa6i#01",
+                "label": "Capital",
+                "data": "",
+                "leaf": false,
+                "collapsedIcon": "pi pi-folder",
+                "expandedIcon": "pi pi-folder-open",
+                "icon": "pi pi-sitemap",
+                "children": [
+                    {
+                        "key": "ACCGRP_291ErU9YxSGhWmwTqIEsJfSJehp#ACCGRP_291ErRg6K7X4LYWCqzNUz72K7Ik#02",
+                        "label": "Retained Earnings",
+                        "data": "",
+                        "leaf": false,
+                        "collapsedIcon": "pi pi-folder",
+                        "expandedIcon": "pi pi-folder-open",
+                        "icon": "pi pi-sitemap",
+                        "children": [
+                            {
+                                "key": "ACCGRP_291ErTXAWtSw24UX33LQQAwtATr#ACCGRP_291ErU9YxSGhWmwTqIEsJfSJehp#03",
+                                "label": "Accumulated Profit & Loss",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "key": "ACCGRP_291ErQ4NaInXjtM5WC8f6GEV4tH#ACCGRP_291ErRg6K7X4LYWCqzNUz72K7Ik#02",
+                        "label": "Capital",
+                        "data": "",
+                        "leaf": false,
+                        "collapsedIcon": "pi pi-folder",
+                        "expandedIcon": "pi pi-folder-open",
+                        "icon": "pi pi-sitemap",
+                        "children": [
+                            {
+                                "key": "ACCGRP_291ErQdJSSJ01CNb7kPQjQ4ee7S#ACCGRP_291ErQ4NaInXjtM5WC8f6GEV4tH#03",
+                                "label": "Capital",
+                                "data": "",
+                                "leaf": false,
+                                "collapsedIcon": "pi pi-folder",
+                                "expandedIcon": "pi pi-folder-open",
+                                "icon": "pi pi-sitemap",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+ ]
+}

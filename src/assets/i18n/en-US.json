@@ -1,0 +1,15 @@
+{
+	"administration": {
+		"role": {
+			"list": {
+				"button": {
+					"add": "Add",
+					"delete": "Delete",
+					"new": "New"
+				},
+				"description": "The place where you manage roles 1",
+				"title": "My Name is {{name}} and I am working us an {{des}}"
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+    "administration": {
+        "role": {
+            "role_list": {
+                "breadcrumbs": {
+                    "breadcrumb1": "الادارة",
+                    "breadcrumb2": "قائمة الأدوار"
+                },
+                "description_label": "وصف",
+                "name_label": "اسم",
+                "date_label": "تاريخ الإنشاء",
+                "role_list_page_title":"الأدوار"
+            },
+            "add_role": {
+                "breadcrumbs": {
+                    "breadcrumb1": " الادارة",
+                    "breadcrumb2": "أضف دورًا"
+                },
+                "validations": {
+                    "name_required": "الرجاء إدخال اسم الدور",
+                    "role_description_required": "الرجاء إدخال وصف الدور"
+                },
+                "description_label": "وصف",
+				"name_label": "اسم",
+				"date_label": "تاريخ الإنشاء",
+                "add_role_page_title":" الادارة",
+                "name_placeholder":"أدخل الاسم",
+                "description_placeholder":"أدخل الوصف"
+            }
+        }
+    },
+    "common": {
+        "Content": {
+            "new_label": "الجديد",
+            "save_label": "يحفظ",
+            "cancel_label": "يلغي",
+            "action_label": "أجراءات"
+        },
+        "alert": {
+            "success_message": "وظيفة {{function}} وظيفة"
+        }
+    }
+}

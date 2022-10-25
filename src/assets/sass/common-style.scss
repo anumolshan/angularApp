@@ -1,0 +1,65 @@
+.pageload {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 99999999;
+	left: 0;
+	top: 0;
+	p-progressspinner {
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		width: 30em;
+		height: 18em;
+		margin-top: -9em;
+		margin-left: -15em;
+	}
+	svg {
+		circle {
+			fill: none !important;
+		}
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+.layout-wrapper .layout-main .layout-content {
+	padding: 1rem !important;
+	flex: 1 1 0px;
+  }
+
+  .amplify-button[data-variation=primary] {
+
+	background-color: hsl(11deg 100% 41%) !important;
+
+  }
+  .customised-treetable .p-treetable .p-treetable-tbody > tr > td {
+    text-align: left;
+    border: 1px solid #e4e4e4;
+    border-width: 0 0 1px 0 !important;
+    padding: 0.25rem 0.75rem !important;
+}
+.customised-datatable .p-datatable .p-datatable-tbody > tr > td {
+    text-align: left;
+    border: 1px solid #e4e4e4 !important;
+    padding: 0.25rem 0.75rem !important;
+}
+// .viewjournal-table .p-datatable .p-datatable-tbody > tr > td {
+//     text-align: left;
+//     border: 1px solid #e4e4e4;
+//     padding: 0.25rem 0.75rem !important;
+// }
+// .createjournal-table .p-datatable .p-datatable-tbody > tr > td {
+//     text-align: left;
+//     border: 1px solid #e4e4e4;
+//     padding: 0.25rem 0.75rem;
+// }

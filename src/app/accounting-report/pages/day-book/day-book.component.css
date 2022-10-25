@@ -1,0 +1,12 @@
+.custom_input {
+  background-color: transparent !important;
+  resize: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}

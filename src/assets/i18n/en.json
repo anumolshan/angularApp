@@ -1,0 +1,97 @@
+{
+    "administration": {
+        "role": {
+            "role_list": {
+                "breadcrumbs": {
+                    "breadcrumb1": "Administration",
+                    "breadcrumb2": "Role-List"
+                },
+                "description_label": "Description",
+                "name_label": "Name",
+                "date_label": "Created Date",
+                "role_list_page_title": "Roles"
+            },
+            "add_role": {
+                "breadcrumbs": {
+                    "breadcrumb1": "Administration",
+                    "breadcrumb2": "Add-Role"
+                },
+                "validations": {
+                    "name_required": "Please Enter the Role Name",
+                    "role_description_required": "Please Enter the Role Description"
+                },
+                "description_label": "Description",
+                "name_label": "Name",
+                "date_label": "Created Date",
+                "add_role_page_title": "Add Role",
+                "name_placeholder":"Enter Name",
+                "description_placeholder":"Enter Description"
+            }
+        }
+    },
+    "common": {
+        "Content": {
+            "new_label": "New",
+            "save_label": "Save",
+            "cancel_label": "Cancel",
+            "action_label":"Actions",
+            "deleted_label":"Deleted",
+            "updated_label":"Updated",
+            "saved_label":"Saved",
+            "delete_confirmation_Label":"Delete Confirmation",
+            "edit_confirmation_Label":"Update Confirmation"
+        },
+        "alert": {
+            "success_message": "Role {{function}} Successfully",
+            "confirmation_message":"Do you want to {{confirmFunction}} this record?",
+            "alert_message":"You have {{alertFunction}}"
+        }
+    },
+    "primeng": {
+        "startsWith": "Starts with",
+        "contains": "Contains",
+        "notContains": "Not contains",
+        "endsWith": "Ends with",
+        "equals": "Equals",
+        "notEquals": "Not equals",
+        "noFilter": "No Filter",
+        "lt": "Less than",
+        "lte": "Less than or equal to",
+        "gt": "Greater than",
+        "gte": "Greater than or equal to",
+        "is": "Is",
+        "isNot": "Is not",
+        "before": "Before",
+        "after": "After",
+        "dateIs": "Date is",
+        "dateIsNot": "Date is not",
+        "dateBefore": "Date is before",
+        "dateAfter": "Date is after",
+        "clear": "Clear",
+        "apply": "Apply",
+        "matchAll": "Match All",
+        "matchAny": "Match Any",
+        "addRule": "Add Rule",
+        "removeRule": "Remove Rule",
+        "accept": "Yes",
+        "reject": "No",
+        "choose": "Choose",
+        "upload": "Upload",
+        "cancel": "Cancel",
+        "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        "dayNamesMin": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+        "monthNames": ["January","February","March","April","May","June","July","August","September","October","November","December"],
+        "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        "dateFormat": "mm/dd/yy",
+        "firstDayOfWeek": 0,
+        "today": "Today",
+        "weekHeader": "Wk",
+        "weak": "Weak",
+        "medium": "Medium",
+        "strong": "Strong",
+        "passwordPrompt":"Enter a password",
+        "emptyMessage": "No results found",
+        "emptyFilterMessage": "No results found"
+    }
+}

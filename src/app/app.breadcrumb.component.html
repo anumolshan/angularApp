@@ -1,0 +1,26 @@
+<div class="layout-breadcrumb">
+    <ul>
+        <li><a routerLink=""><i class="pi pi-home"></i></a></li>
+        <li>/</li>
+        <ng-template ngFor let-item let-last="last" [ngForOf]="items">
+            <li>
+                <a [routerLink]="item.routerLink" *ngIf="item.routerLink">{{item.label | translate}}</a>
+                <ng-container *ngIf="!item.routerLink">{{item.label | translate}}</ng-container>
+            </li>
+            <li *ngIf="!last">/</li>
+        </ng-template>
+    </ul>
+
+    <div class="layout-breadcrumb-options">
+        <!-- <a routerLink="/" title="Backup">
+            <i class="pi pi-cloud-upload"></i>
+        </a>
+        <a routerLink="/" title="Bookmark">
+            <i class="pi pi-bookmark"></i>
+        </a> -->
+        <a title="Logout" (click)="signOut()">
+            <i class="pi pi-power-off cursor-pointer"></i>
+        </a>
+    </div>
+</div>
+<p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
